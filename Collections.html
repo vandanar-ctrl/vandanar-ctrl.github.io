@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections Interview Questions</title>
+<link rel="stylesheet" href="style.css">
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <iframe src="media\pdfs\Collections_Guidepdf.pdf" width="100%" height="600px"></iframe>
+    <div class="section">
+        <h2>Collections</h2>
+        <ul>
+            <li>What are the different types of Collections in Java?
+                <div class="answer">
+                    <p>Java Collections Framework provides various types of collections to store and manipulate groups of objects. The main types of collections are:</p>
+                    <ul>
+                        <li><strong>List:</strong> An ordered collection that allows duplicate elements. Examples include ArrayList, LinkedList, and Vector.</li>
+                        <li><strong>Set:</strong> A collection that does not allow duplicate elements. Examples include HashSet, LinkedHashSet, and TreeSet.</li>
+                        <li><strong>Queue:</strong> A collection used to hold multiple elements prior to processing. Examples include LinkedList, PriorityQueue, and ArrayDeque.</li>
+                        <li><strong>Map:</strong> A collection that maps keys to values, with no duplicate keys allowed. Examples include HashMap, LinkedHashMap, and TreeMap.</li>
+                    </ul>
+                    <h3>Tree Structure of Collections:</h3>
+                    <pre><code>
+                    Collection
+                    ├── List
+                    │   ├── ArrayList
+                    │   ├── LinkedList
+                    │   └── Vector
+                    ├── Set
+                    │   ├── HashSet
+                    │   ├── LinkedHashSet
+                    │   └── TreeSet
+                    ├── Queue
+                    │   ├── LinkedList
+                    │   ├── PriorityQueue
+                    │   └── ArrayDeque
+                    └── Map
+                        ├── HashMap
+                        ├── LinkedHashMap
+                        └── TreeMap
+                    </code></pre>
+                </div>
+            </li>
+            <li>What is a List in Java?
+                <div class="answer">A List in Java is an ordered collection that allows duplicate elements. It provides positional access and insertion of elements. Examples include ArrayList, LinkedList, and Vector.</div>
+                <pre><code>
+        // Example of using a List in Java
+        List<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Apple"); // Allows duplicate elements
+        System.out.println(list); // Output: [Apple, Banana, Apple]
+                </code></pre>
+                <div class="scenario">Real-life scenario: A List can be used to store a list of items in a shopping cart where duplicate items are allowed.</div>
+            </li>
+            <li>When should you use an ArrayList in Java?
+                <div class="answer">You should use an ArrayList when you need fast random access to elements and when the size of the list is not expected to change frequently. ArrayList provides constant-time positional access and is backed by an array.</div>
+                <pre><code>
+        // Example of using an ArrayList in Java
+        List<String> arrayList = new ArrayList<>();
+        arrayList.add("Apple");
+        arrayList.add("Banana");
+        System.out.println(arrayList.get(1)); // Output: Banana
+                </code></pre>
+                <div class="scenario">Real-life scenario: An ArrayList can be used to store a list of students in a class where the list is not expected to change frequently.</div>
+            </li>
+            <li>When should you use a LinkedList in Java?
+                <div class="answer">You should use a LinkedList when you need fast insertion and deletion of elements at both ends of the list. LinkedList provides constant-time insertions and deletions and is implemented as a doubly-linked list.</div>
+                <pre><code>
+        // Example of using a LinkedList in Java
+        List<String> linkedList = new LinkedList<>();
+        linkedList.add("Apple");
+        linkedList.addFirst("Banana");
+        linkedList.addLast("Cherry");
+        System.out.println(linkedList); // Output: [Banana, Apple, Cherry]
+                </code></pre>
+                <div class="scenario">Real-life scenario: A LinkedList can be used to implement a queue for a printer where documents are added and removed from both ends.</div>
+            </li>
+            <li>What is a Set in Java?
+                <div class="answer">A Set in Java is a collection that does not allow duplicate elements. It models the mathematical set abstraction and provides methods for set operations. Examples include HashSet, LinkedHashSet, and TreeSet.</div>
+                <pre><code>
+        // Example of using a Set in Java
+        Set<String> set = new HashSet<>();
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Apple"); // Duplicate element, will not be added
+        System.out.println(set); // Output: [Apple, Banana]
+                </code></pre>
+                <div class="scenario">Real-life scenario: A Set can be used to store a collection of unique email addresses for a newsletter subscription.</div>
+            </li>
+            <li>When should you use a HashSet in Java?
+                <div class="answer">You should use a HashSet when you need a collection that does not allow duplicate elements and when you do not care about the order of elements. HashSet provides constant-time performance for basic operations like add, remove, and contains.</div>
+                <pre><code>
+        // Example of using a HashSet in Java
+        Set<String> hashSet = new HashSet<>();
+        hashSet.add("Apple");
+        hashSet.add("Banana");
+        System.out.println(hashSet.contains("Apple")); // Output: true
+                </code></pre>
+                <div class="scenario">Real-life scenario: A HashSet can be used to store a collection of unique product IDs in an inventory system.</div>
+            </li>
+            <li>When should you use a LinkedHashSet in Java?
+                <div class="answer">You should use a LinkedHashSet when you need a collection that does not allow duplicate elements and when you need to maintain the insertion order of elements. LinkedHashSet provides predictable iteration order.</div>
+                <pre><code>
+        // Example of using a LinkedHashSet in Java
+        Set<String> linkedHashSet = new LinkedHashSet<>();
+        linkedHashSet.add("Apple");
+        linkedHashSet.add("Banana");
+        linkedHashSet.add("Cherry");
+        System.out.println(linkedHashSet); // Output: [Apple, Banana, Cherry]
+                </code></pre>
+                <div class="scenario">Real-life scenario: A LinkedHashSet can be used to store a collection of unique user actions in the order they were performed.</div>
+            </li>
+            <li>When should you use a TreeSet in Java?
+                <div class="answer">You should use a TreeSet when you need a collection that does not allow duplicate elements and when you need the elements to be sorted in their natural order or by a custom comparator. TreeSet provides log(n) time cost for basic operations.</div>
+                <pre><code>
+        // Example of using a TreeSet in Java
+        Set<String> treeSet = new TreeSet<>();
+        treeSet.add("Banana");
+        treeSet.add("Apple");
+        treeSet.add("Cherry");
+        System.out.println(treeSet); // Output: [Apple, Banana, Cherry]
+                </code></pre>
+                <div class="scenario">Real-life scenario: A TreeSet can be used to store a collection of unique words in a dictionary, sorted in alphabetical order.</div>
+            </li>
+            <li>What is a Queue in Java?
+                <div class="answer">A Queue in Java is a collection used to hold multiple elements prior to processing. It follows the First In First Out (FIFO) principle. Examples include LinkedList, PriorityQueue, and ArrayDeque.</div>
+                <pre><code>
+        // Example of using a Queue in Java
+        Queue<String> queue = new LinkedList<>();
+        queue.add("Apple");
+        queue.add("Banana");
+        System.out.println(queue.poll()); // Output: Apple
+                </code></pre>
+                <div class="scenario">Real-life scenario: A Queue can be used to manage tasks in a task scheduler where tasks are processed in the order they are added.</div>
+            </li>
+            <li>When should you use a LinkedList as a Queue in Java?
+                <div class="answer">You should use a LinkedList as a Queue when you need a collection that allows fast insertion and deletion of elements at both ends. LinkedList provides constant-time insertions and deletions and can be used as a deque (double-ended queue).</div>
+                <pre><code>
+        // Example of using a LinkedList as a Queue in Java
+        Queue<String> linkedListQueue = new LinkedList<>();
+        linkedListQueue.add("Apple");
+        linkedListQueue.add("Banana");
+        System.out.println(linkedListQueue.poll()); // Output: Apple
+                </code></pre>
+                <div class="scenario">Real-life scenario: A LinkedList can be used to implement a queue for customer service requests where requests are processed in the order they are received.</div>
+            </li>
+            <li>When should you use a PriorityQueue in Java?
+                <div class="answer">You should use a PriorityQueue when you need a collection that orders its elements according to their natural ordering or by a custom comparator. PriorityQueue provides log(n) time cost for the enqueuing and dequeuing methods.</div>
+                <pre><code>
+        // Example of using a PriorityQueue in Java
+        Queue<Integer> priorityQueue = new PriorityQueue<>();
+        priorityQueue.add(3);
+        priorityQueue.add(1);
+        priorityQueue.add(2);
+        System.out.println(priorityQueue.poll()); // Output: 1
+                </code></pre>
+                <div class="scenario">Real-life scenario: A PriorityQueue can be used to manage tasks in a task scheduler where tasks with higher priority are processed first.</div>
+            </li>
+            <li>When should you use an ArrayDeque in Java?
+                <div class="answer">You should use an ArrayDeque when you need a resizable array implementation of a deque (double-ended queue). ArrayDeque provides constant-time performance for insertions and deletions at both ends and is faster than LinkedList for this purpose.</div>
+                <pre><code>
+        // Example of using an ArrayDeque in Java
+        Deque<String> arrayDeque = new ArrayDeque<>();
+        arrayDeque.addFirst("Apple");
+        arrayDeque.addLast("Banana");
+        System.out.println(arrayDeque.pollFirst()); // Output: Apple
+                </code></pre>
+                <div class="scenario">Real-life scenario: An ArrayDeque can be used to implement a deque for a browser's back and forward navigation history.</div>
+            </li>
+            <li>What is a Map in Java?
+                <div class="answer">A Map in Java is a collection that maps keys to values, with no duplicate keys allowed. It provides methods for basic operations like put, get, and remove. Examples include HashMap, LinkedHashMap, and TreeMap.</div>
+                <pre><code>
+        // Example of using a Map in Java
+        Map<String, Integer> map = new HashMap<>();
+        map.put("Apple", 1);
+        map.put("Banana", 2);
+        System.out.println(map.get("Apple")); // Output: 1
+                </code></pre>
+                <div class="scenario">Real-life scenario: A Map can be used to store a collection of product IDs and their corresponding quantities in an inventory system.</div>
+            </li>
+            <li>When should you use a HashMap in Java?
+                <div class="answer">You should use a HashMap when you need a collection that maps keys to values and when you do not care about the order of the elements. HashMap provides constant-time performance for basic operations like put, get, and remove.</div>
+                <pre><code>
+        // Example of using a HashMap in Java
+        Map<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("Apple", 1);
+        hashMap.put("Banana", 2);
+        System.out.println(hashMap.get("Apple")); // Output: 1
+                </code></pre>
+                <div class="scenario">Real-life scenario: A HashMap can be used to store a collection of user IDs and their corresponding user information in a user management system.</div>
+            </li>
+            <li>When should you use a LinkedHashMap in Java?
+                <div class="answer">You should use a LinkedHashMap when you need a collection that maps keys to values and when you need to maintain the insertion order of elements. LinkedHashMap provides predictable iteration order.</div>
+                <pre><code>
+        // Example of using a LinkedHashMap in Java
+        Map<String, Integer> linkedHashMap = new LinkedHashMap<>();
+        linkedHashMap.put("Apple", 1);
+        linkedHashMap.put("Banana", 2);
+        System.out.println(linkedHashMap); // Output: {Apple=1, Banana=2}
+                </code></pre>
+                <div class="scenario">Real-life scenario: A LinkedHashMap can be used to store a collection of user actions in the order they were performed for audit purposes.</div>
+            </li>
+            <li>When should you use a TreeMap in Java?
+                <div class="answer">You should use a TreeMap when you need a collection that maps keys to values and when you need the keys to be sorted in their natural order or by a custom comparator. TreeMap provides log(n) time cost for basic operations.</div>
+                <pre><code>
+        // Example of using a TreeMap in Java
+        Map<String, Integer> treeMap = new TreeMap<>();
+        treeMap.put("Banana", 2);
+        treeMap.put("Apple", 1);
+        System.out.println(treeMap); // Output: {Apple=1, Banana=2}
+                </code></pre>
+                <div class="scenario">Real-life scenario: A TreeMap can be used to store a collection of student names and their corresponding grades, sorted in alphabetical order.</div>
+            </li>
+            <li>What is the difference between a List and a Set in Java?
+                <div class="answer">A List is an ordered collection that allows duplicate elements, while a Set is a collection that does not allow duplicate elements. Lists provide positional access and insertion, while Sets provide methods for set operations.</div>
+                <pre><code>
+        // Example of using a List and a Set in Java
+        List<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Apple"); // Allows duplicate elements
+        System.out.println(list); // Output: [Apple, Banana, Apple]
+
+        Set<String> set = new HashSet<>();
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Apple"); // Duplicate element, will not be added
+        System.out.println(set); // Output: [Apple, Banana]
+                </code></pre>
+                <div class="scenario">Real-life scenario: Use a List to store a collection of items in a shopping cart where duplicate items are allowed, and use a Set to store a collection of unique email addresses for a newsletter subscription.</div>
+            </li>
+            <li>What is the difference between a Set and a Map in Java?
+                <div class="answer">A Set is a collection that does not allow duplicate elements, while a Map is a collection that maps keys to values, with no duplicate keys allowed. Sets provide methods for set operations, while Maps provide methods for basic operations like put, get, and remove.</div>
+                <pre><code>
+        // Example of using a Set and a Map in Java
+        Set<String> set = new HashSet<>();
+        set.add("Apple");
+        set.add("Banana");
+        System.out.println(set); // Output: [Apple, Banana]
+
+        Map<String, Integer> map = new HashMap<>();
+        map.put("Apple", 1);
+        map.put("Banana", 2);
+        System.out.println(map); // Output: {Apple=1, Banana=2}
+                </code></pre>
+                <div class="scenario">Real-life scenario: Use a Set to store a collection of unique product IDs in an inventory system, and use a Map to store a collection of product IDs and their corresponding quantities.</div>
+            </li>
+            <li>What is the difference between a Queue and a List in Java?
+                <div class="answer">A Queue is a collection used to hold multiple elements prior to processing and follows the First In First Out (FIFO) principle, while a List is an ordered collection that allows duplicate elements and provides positional access and insertion.</div>
+                <pre><code>
+        // Example of using a Queue and a List in Java
+        Queue<String> queue = new LinkedList<>();
+        queue.add("Apple");
+        queue.add("Banana");
+        System.out.println(queue.poll()); // Output: Apple
+
+        List<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        System.out.println(list.get(1)); // Output: Banana
+                </code></pre>
+                <div class="scenario">Real-life scenario: Use a Queue to manage tasks in a task scheduler where tasks are processed in the order they are added, and use a List to store a collection of items in a shopping cart where duplicate items are allowed.</div>
+            </li>
+            <li>What is the difference between a HashSet and a TreeSet in Java?
+                <div class="answer">A HashSet is a collection that does not allow duplicate elements and provides constant-time performance for basic operations, while a TreeSet is a collection that does not allow duplicate elements and provides elements in sorted order with log(n) time cost for basic operations.</div>
+                <pre><code>
+        // Example of using a HashSet and a TreeSet in Java
+        Set<String> hashSet = new HashSet<>();
+        hashSet.add("Apple");
+        hashSet.add("Banana");
+        System.out.println(hashSet); // Output: [Apple, Banana]
+
+        Set<String> treeSet = new TreeSet<>();
+        treeSet.add("Banana");
+        treeSet.add("Apple");
+        System.out.println(treeSet); // Output: [Apple, Banana]
+                </code></pre>
+                <div class="scenario">Real-life scenario: Use a HashSet to store a collection of unique product IDs in an inventory system, and use a TreeSet to store a collection of unique words in a dictionary, sorted in alphabetical order.</div>
+            </li>
+            <li>What is the difference between a HashMap and a TreeMap in Java?
+                <div class="answer">A HashMap is a collection that maps keys to values and provides constant-time performance for basic operations, while a TreeMap is a collection that maps keys to values and provides keys in sorted order with log(n) time cost for basic operations.</div>
+                <pre><code>
+        // Example of using a HashMap and a TreeMap in Java
+        Map<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("Apple", 1);
+        hashMap.put("Banana", 2);
+        System.out.println(hashMap); // Output: {Apple=1, Banana=2}
+
+        Map<String, Integer> treeMap = new TreeMap<>();
+        treeMap.put("Banana", 2);
+        treeMap.put("Apple", 1);
+        System.out.println(treeMap); // Output: {Apple=1, Banana=2}
+                </code></pre>
+                <div class="scenario">Real-life scenario: Use a HashMap to store a collection of user IDs and their corresponding user information in a user management system, and use a TreeMap to store a collection of student names and their corresponding grades, sorted in alphabetical order.</div>
+            </li>
+            <li>What is the difference between an ArrayList and a LinkedList in Java?
+                <div class="answer">An ArrayList is a resizable array implementation of the List interface that provides fast random access to elements, while a LinkedList is a doubly-linked list implementation of the List interface that provides fast insertion and deletion of elements at both ends.</div>
+                <pre><code>
+        // Example of using an ArrayList and a LinkedList in Java
+        List<String> arrayList = new ArrayList<>();
+        arrayList.add("Apple");
+        arrayList.add("Banana");
+        System.out.println(arrayList.get(1)); // Output: Banana
+
+        List<String> linkedList = new LinkedList<>();
+        linkedList.add("Apple");
+        linkedList.addFirst("Banana");
+        System.out.println(linkedList); // Output: [Banana, Apple]
+                </code></pre>
+                <div class="scenario">Real-life scenario: Use an ArrayList to store a list of students in a class where the list is not expected to change frequently, and use a LinkedList to implement a queue for a printer where documents are added
+        </ul>
+    </div>
+   </div>
+</body></html>

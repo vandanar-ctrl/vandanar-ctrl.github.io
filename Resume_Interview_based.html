@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Interview Questions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><div class="container">
+    <h1>Resume Interview Questions</h1>
+    <iframe src="media\pdfs\Resume_questions.pdf" width="100%" height="600px"></iframe>
+    <iframe src="media\pdfs\20JavaInterviewQuestions.pdf" width="100%" height="600px"></iframe>
+    <iframe src="media\pdfs\CapgeminiJavaInterviewQuestions.pdf" width="100%" height="600px"></iframe>
+
+          <h1>30 Technical Interview Questions &amp; Answers</h1>
+          <p>Based on your resume, here are 30 technical interview questions along with natural, human-like answers.</p>
+            <h2>Git Repositories</h2>
+            <ul>
+              <li><a href="https://github.com/Venkatesh-Bharath/Java-Full-Stack-interview-questions-3-to-10-years-experience" target="_blank">Java Full Stack Interview Questions</a></li>
+              <li><a href="https://github.com/ManojKumarPatnaik/Sr.SoftwareEngineerInterviewPrep/blob/main/README.md" target="_blank">Senior Software Engineer Interview Prep</a></li>
+              <li><a href="https://github.com/abhishekekal/Top-1000-Interview-Java-Adv-java-Spring-boot-hibernate-microservices-All-in-one-for-Interview/tree/main" target="_blank">Top 1000 Java & Spring Boot Interview Questions</a></li>
+            </ul>
+          
+          <h2>Java &amp; Spring Boot</h2>
+          <ol>
+            <li>
+              <p class="question">Q: You mentioned using Spring State Machine for approval workflows. How does it work?</p>
+              <p class="answer">A: "Think of it like a flowchart—each ‘state’ represents a step (e.g., ‘Pending,’ ‘Approved’), and events (like ‘submit’ or ‘reject’) trigger transitions. We used it for multi-level approvals, like manager → HR. The tricky part? Handling edge cases, like timeouts. We added a ‘deadline’ event to auto-reject stale requests."</p>
+            </li>
+            <li>
+              <p class="question">Q: How did you implement retry policies with Feign clients?</p>
+              <p class="answer">A: "We used Spring’s <code>@Retryable</code> annotation with exponential backoff—so if a payment API failed, it’d retry after 1s, then 2s, etc. But we also set a max limit to avoid endless retries. Learned the hard way: always log retries! Once, a silent retry loop clogged our queues."</p>
+            </li>
+            <li>
+              <p class="question">Q: Why Redis for caching? Why not Memcached?</p>
+              <p class="answer">A: "Redis had persistence and richer data structures (like sorted sets for priority queues). For our reservation system, we needed TTL (time-to-live) for temporary holds—like ‘this room is reserved for 15 mins.’ Memcached is great, but Redis fit our use case better."</p>
+            </li>
+            <li>
+              <p class="question">Q: How did you ensure thread safety in your Spring Boot apps?</p>
+              <p class="answer">A: "Mostly by avoiding shared mutable state—like using local variables or thread-safe collections. For singletons, we leaned on Spring’s default scope (which is thread-safe if stateless). Once, we had a race condition in inventory updates; fixed it with <code>@Transactional</code> and optimistic locking."</p>
+            </li>
+            <li>
+              <p class="question">Q: Explain JWT authentication in your assessment platform.</p>
+              <p class="answer">A: "Users logged in, and the backend issued a signed JWT with their role (student/teacher). The frontend sent it in the <code>Authorization</code> header. We validated signatures and expiration on every request. Gotcha? Token revocation. We added a short-lived token plus refresh token flow to handle logouts."</p>
+            </li>
+          </ol>
+        
+          <h2>Microservices &amp; Cloud (Azure)</h2>
+          <ol>
+            <li>
+              <p class="question">Q: How did Azure Service Bus help with the SAGA pattern?</p>
+              <p class="answer">A: "It acted as the ‘post office’ between services. For example, when a booking started, we’d publish a <em>BookingStartedEvent</em>. Other services subscribed and replied with success/failure events. If payment failed, we’d publish a <em>CompensateBookingEvent</em> to undo steps. Service Bus handled queuing and retries."</p>
+            </li>
+            <li>
+              <p class="question">Q: What’s the difference between Azure Service Bus and Event Grid?</p>
+              <p class="answer">A: "Service Bus is for ordered, guaranteed delivery (like payments), while Event Grid is for lightweight, event-driven stuff (like notifications). We used Service Bus for SAGA because order mattered—you can’t refund before charging!"</p>
+            </li>
+            <li>
+              <p class="question">Q: How did you monitor microservices?</p>
+              <p class="answer">A: "Azure Monitor combined with Application Insights gave us metrics (CPU, latency) and distributed tracing. We also set up Grafana dashboards to visualize trends. Once, we spotted a memory leak because Grafana showed a steady climb—turned out a cache wasn’t evicting entries."</p>
+            </li>
+            <li>
+              <p class="question">Q: How did you handle secrets (like DB passwords) in Azure?</p>
+              <p class="answer">A: "Azure Key Vault! We stored secrets there and fetched them at runtime. For local dev, we used environment variables with <code>.env</code> files (but never committed them!). A teammate once hardcoded a password—thankfully, our pre-commit hooks caught it."</p>
+            </li>
+            <li>
+              <p class="question">Q: Explain your Terraform pipeline.</p>
+              <p class="answer">A: "We defined infrastructure as code—like AKS clusters or SQL DBs—in Terraform files. Azure DevOps ran <code>terraform apply</code> on merges to main. The beauty? If someone manually changed a setting, Terraform would revert it next deploy. Saved us from ‘it works on my laptop’ chaos."</p>
+            </li>
+          </ol>
+        
+          <h2>Databases &amp; Performance</h2>
+          <ol>
+            <li>
+              <p class="question">Q: How did you optimize queries in your reservation system?</p>
+              <p class="answer">A: "Indexes! Added them on frequently queried columns like <code>room_id</code> and <code>date</code>. Also, batched writes during peak hours. The biggest win? Denormalizing some data—added a ‘cached_availability’ column to avoid complex joins."</p>
+            </li>
+            <li>
+              <p class="question">Q: Why use Change Data Capture (CDC)?</p>
+              <p class="answer">A: "We needed real-time updates—like when inventory changed, other services (e.g., analytics) had to know. CDC captured DB changes and pushed them to Azure Service Bus. The alternative was polling, which wasted resources."</p>
+            </li>
+            <li>
+              <p class="question">Q: How’d you handle transaction isolation in Spring?</p>
+              <p class="answer">A: "The default was <code>READ_COMMITTED</code>, but for payment workflows, we used <code>SERIALIZABLE</code> to prevent double-spending. Trade-off? Performance. So we kept critical paths short and added retries for deadlocks."</p>
+            </li>
+            <li>
+              <p class="question">Q: Ever faced deadlocks? How’d you debug?</p>
+              <p class="answer">A: "Yes! Our inventory audit deadlocked when two transactions tried to update the same rows in reverse order. Azure SQL’s deadlock graphs helped pinpoint it. We fixed it by standardizing the update order—always sort IDs before updating."</p>
+            </li>
+            <li>
+              <p class="question">Q: How’d you scale Azure SQL under load?</p>
+              <p class="answer">A: "Vertical scaling first (bigger tiers), then read replicas for reporting queries. Also, implemented connection pooling with HikariCP to avoid overwhelming the DB. Sharding was considered for future growth, but it wasn’t needed yet."</p>
+            </li>
+          </ol>
+        
+          <h2>DevOps &amp; CI/CD</h2>
+          <ol>
+            <li>
+              <p class="question">Q: How did your automation pipeline reduce deployment time?</p>
+              <p class="answer">A: "Before, we had manual steps that took around an hour to deploy. After implementing Azure DevOps pipelines with clearly defined stages (build, test, deploy), and by parallelizing tests along with utilizing incremental Docker layers, we cut waste dramatically—resulting in roughly a 40% improvement in deployment time."</p>
+            </li>
+            <li>
+              <p class="question">Q: How’d you roll back a bad deployment?</p>
+              <p class="answer">A: "Blue-green deployments saved us! We flipped traffic back to the old version while we fixed the bug. Additionally, using feature flags allowed us to disable broken features without having to roll back the entire deployment."</p>
+            </li>
+            <li>
+              <p class="question">Q: What’s in your Dockerfile best practices?</p>
+              <p class="answer">A: "I use multi-stage builds to keep images small, run processes as non-root for added security, and include health checks. Once, an image included a 1GB debug tool—by removing dev dependencies, we trimmed it down to about 50MB."</p>
+            </li>
+            <li>
+              <p class="question">Q: How’d you secure your AKS cluster?</p>
+              <p class="answer">A: "I use network policies to restrict pod traffic, enforce RBAC for Kubernetes roles, scan images for vulnerabilities using tools like Trivy, and enable Azure AD integration for secure authentication."</p>
+            </li>
+            <li>
+              <p class="question">Q: Ever debugged a CI pipeline failure?</p>
+              <p class="answer">A: "Oh yeah—once, a flaky test passed locally but failed in CI. It turned out to be due to timezone differences. By breaking the pipeline into smaller jobs and carefully reviewing logs, I was able to isolate the issue and update the tests to mock the clock appropriately."</p>
+            </li>
+          </ol>
+        
+          <h2>System Design &amp; Architecture</h2>
+          <ol>
+            <li>
+              <p class="question">Q: How’d you design the appointment system to handle spikes?</p>
+              <p class="answer">A: "We used a queue-based leveling approach—requests were sent to Azure Service Bus and processed by a set of worker services at a controlled rate. Additionally, caching doctor schedules in Redis helped reduce database load during peak times."</p>
+            </li>
+            <li>
+              <p class="question">Q: Why event-driven over REST for some services?</p>
+              <p class="answer">A: "While REST is great for request/response interactions, event-driven architecture decouples services. For instance, when a booking was made, notifications and analytics could process events asynchronously without delaying the user experience. It also made replays for audits much simpler."</p>
+            </li>
+            <li>
+              <p class="question">Q: How’d you ensure idempotency in APIs?</p>
+              <p class="answer">A: "We required clients to send a unique <code>request_id</code> and checked for its existence before processing. For critical operations like payments, we also used idempotency keys, which saved us from duplicate charges and other inconsistencies during retries."</p>
+            </li>
+            <li>
+              <p class="question">Q: How’d you version your APIs?</p>
+              <p class="answer">A: "We use URL versioning, e.g., <code>/v1/booking</code>, for simplicity. For breaking changes, we supported both versions concurrently for a period, using feature flags to smoothly migrate users to the new version."</p>
+            </li>
+            <li>
+              <p class="question">Q: How’d you handle partial failures in distributed transactions?</p>
+              <p class="answer">A: "We leveraged the SAGA pattern and implemented compensating transactions. For example, if a payment succeeded but inventory update failed, a refund would be automatically triggered and logged for manual review if needed."</p>
+            </li>
+          </ol>
+        
+          <h2>Troubleshooting &amp; Debugging</h2>
+          <ol>
+            <li>
+              <p class="question">Q: How’d you diagnose high latency in your APIs?</p>
+              <p class="answer">A: "I started by checking Application Insights to identify slow dependencies. I discovered a third-party API averaging 2-second responses, so we added caching and adjusted timeouts accordingly. Java Flight Recorder also helped identify internal bottlenecks."</p>
+            </li>
+            <li>
+              <p class="question">Q: How’d you fix a memory leak in Java?</p>
+              <p class="answer">A: "Using VisualVM to analyze heap dumps, I discovered a static <code>HashMap</code> that was growing without bounds. I replaced it with a cache that had proper eviction policies. It was a real eye-opener on the dangers of ‘just this once’ hacks!"</p>
+            </li>
+            <li>
+              <p class="question">Q: Ever had a production outage? What happened?</p>
+              <p class="answer">A: "Yes, we once experienced an outage when Azure SQL throttled us during a major sale. A missing index in a critical query was the culprit. After a hotfix index was deployed, we incorporated load testing into our CI/CD pipeline to catch similar issues early."</p>
+            </li>
+            <li>
+              <p class="question">Q: How’d you simulate load for testing?</p>
+              <p class="answer">A: "I used JMeter for API load tests and Locust for end-to-end user flows. This approach helped identify bottlenecks—like Redis needing more replicas. We even practiced chaos engineering by randomly terminating pods in staging to test resilience."</p>
+            </li>
+            <li>
+              <p class="question">Q: What’s your logging philosophy?</p>
+              <p class="answer">A: "I believe in structured logging (often as JSON) with clear severity levels. Logs should provide enough detail to diagnose issues without capturing sensitive information. We use the ELK stack to tie logs together with correlation IDs for end-to-end traceability."</p>
+            </li>
+          </ol>
+       
+        
+              <h2>Debezium CDC + Azure Event Hubs</h2>
+          
+          <h2>💡 1. What is Debezium CDC?</h2>
+          <h3>✅ Debezium = Open-source CDC Tool (based on Apache Kafka Connect)</h3>
+          <p><strong>CDC (Change Data Capture)</strong> lets you <strong>monitor and capture database changes</strong> — <em>INSERT, UPDATE, DELETE</em> — <strong>in real time</strong>, without modifying the existing application code.</p>
+          
+          <h3>📦 How Debezium works:</h3>
+          <ul>
+              <li>Debezium connects to <strong>transaction logs</strong> of supported databases (MySQL, PostgreSQL, Oracle, etc.)</li>
+              <li>It reads <strong>changes in near real-time</strong></li>
+              <li>It <strong>streams the changes as events</strong> to an <strong>Apache Kafka topic</strong></li>
+          </ul>
+          
+          <pre>
+          <code>
+          {
+            "payload": {
+              "before": null,
+              "after": {
+                "id": 101,
+                "status": "CREATED"
+              },
+              "op": "c",
+              "source": {
+                "table": "orders",
+                "db": "sales"
+              },
+              "ts_ms": 1712345678
+            }
+          }
+          </code>
+          </pre>
+          
+          <h2>🚀 2. What is Azure Event Hubs?</h2>
+          <p><strong>Azure Event Hubs</strong> is a <strong>big data streaming platform and event ingestion service</strong>.</p>
+          
+          <h3>How Event Hubs works:</h3>
+          <ul>
+              <li>You <strong>publish events</strong> to a topic/partition</li>
+              <li>Consumers <strong>listen to those partitions</strong></li>
+              <li>Can integrate with:
+                  <ul>
+                      <li><strong>Azure Functions</strong></li>
+                      <li><strong>Stream Analytics</strong></li>
+                      <li><strong>Azure Data Lake</strong></li>
+                      <li><strong>Microservices</strong></li>
+                  </ul>
+              </li>
+          </ul>
+          
+          <h2>🧩 3. Why CDC and Event Hubs? What's the Flow?</h2>
+          <p><strong>End-to-End Flow:</strong></p>
+          <pre>
+          <code>
+          [Database (MySQL/PostgreSQL/etc)]
+                     │
+                (Transaction Log)
+                     │
+                  Debezium
+               (Reads CDC Changes)
+                     │
+               Kafka Connect (Sink)
+                     │
+               ➡️ Azure Event Hubs ⬅️ (Kafka-compatible endpoint)
+                     │
+               🎯 Microservices consume events
+                   (update their state, trigger workflows, etc.)
+          </code>
+          </pre>
+          
+          <h3>🧠 Why use Debezium + Event Hubs together?</h3>
+          <table>
+              <tr>
+                  <th>Concern</th>
+                  <th>Debezium</th>
+                  <th>Azure Event Hubs</th>
+              </tr>
+              <tr>
+                  <td>Detect data changes</td>
+                  <td>✅</td>
+                  <td>❌</td>
+              </tr>
+              <tr>
+                  <td>Stream changes out of DB</td>
+                  <td>✅</td>
+                  <td>❌</td>
+              </tr>
+              <tr>
+                  <td>Scalable event transport</td>
+                  <td>❌</td>
+                  <td>✅</td>
+              </tr>
+          </table>
+          
+          <h2>✅ Benefits of This Setup</h2>
+          <ul>
+              <li>🔄 <strong>Asynchronous, decoupled architecture</strong></li>
+              <li>🧠 <strong>Event-sourcing friendly</strong></li>
+              <li>🏎️ <strong>Real-time microservices reaction to DB changes</strong></li>
+              <li>🌩️ <strong>Cloud-native scalability with Event Hubs</strong></li>
+              <li>✅ <strong>Replay events</strong> using Event Hub offsets</li>
+          </ul>
+          
+          <h2>🔚 Summary</h2>
+          <table>
+              <tr>
+                  <th>Concept</th>
+                  <th>Role</th>
+              </tr>
+              <tr>
+                  <td><strong>Debezium</strong></td>
+                  <td>Detects and reads DB changes from logs</td>
+              </tr>
+              <tr>
+                  <td><strong>Azure Event Hubs</strong></td>
+                  <td>Reliable, scalable event streaming platform</td>
+              </tr>
+              <tr>
+                  <td><strong>Why both?</strong></td>
+                  <td>Debezium emits CDC events, Event Hubs transports them in cloud-native fashion</td>
+              </tr>
+          </table>
+          
+         
+          </div>
+
+
+   
+</div>
+
+</body>
+</html>

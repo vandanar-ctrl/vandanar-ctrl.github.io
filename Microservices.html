@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microservices Interview Questions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="section">
+        <div class="section">
+            <h2>Microservices Best Practices</h2>
+            <img src="media\gifs/microservices-bes-practices.gif" alt="Microservices Best Practices" style="width:70%; max-width:600px; display:block; margin:0 auto;">
+        </div>
+        <h2>Spring Boot and Microservices</h2>
+        <ul>
+        <li>What is Spring Boot?
+            <div class="answer">Spring Boot is an open-source Java-based framework used to create stand-alone, production-grade Spring-based applications. It simplifies the development process by providing default configurations and a wide range of features.</div>
+        </li>
+        <li>How do you create a Spring Boot application?
+            <div class="answer">You can create a Spring Boot application using the Spring Initializr website or by using the Spring Boot CLI. For example, you can generate a project from the Spring Initializr and then run the main application class annotated with <code>@SpringBootApplication</code>.</div>
+        </li>
+        <li>What is a Microservice?
+            <div class="answer">A microservice is an architectural style that structures an application as a collection of small, autonomous services modeled around a business domain. Each service is self-contained and can be developed, deployed, and scaled independently.</div>
+        </li>
+        <li>How does Spring Boot support Microservices?
+            <div class="answer">Spring Boot supports microservices by providing features such as embedded servers, simplified dependency management, and production-ready configurations. It also integrates with Spring Cloud to provide tools for service discovery, configuration management, and distributed tracing.</div>
+        </li>
+        <li>What is Spring Cloud?
+            <div class="answer">Spring Cloud is a set of tools and frameworks for building distributed systems and microservices. It provides solutions for service discovery, configuration management, circuit breakers, distributed tracing, and more.</div>
+        </li>
+        <li>What is service discovery in Microservices?
+            <div class="answer">Service discovery is a mechanism that allows microservices to find and communicate with each other dynamically. It eliminates the need for hardcoding service locations and enables services to scale and move across different environments.</div>
+        </li>
+        <li>What is Eureka in Spring Cloud?
+            <div class="answer">Eureka is a service discovery tool provided by Spring Cloud Netflix. It allows microservices to register themselves and discover other services in the system. Eureka provides a REST-based interface for service registration and discovery.</div>
+        </li>
+        <li>What is a Config Server in Spring Cloud?
+            <div class="answer">A Config Server in Spring Cloud is a centralized server that provides external configuration for distributed systems. It allows microservices to retrieve their configuration properties from a central location, making it easier to manage and update configurations.</div>
+        </li>
+        <li>What is Hystrix in Spring Cloud?
+            <div class="answer">Hystrix is a library provided by Spring Cloud Netflix that implements the circuit breaker pattern. It helps in preventing cascading failures in a distributed system by providing fallback mechanisms and monitoring service health.</div>
+        </li>
+        <li>What is the circuit breaker pattern?
+            <div class="answer">The circuit breaker pattern is a design pattern used to detect and handle failures in a distributed system. It prevents a service from repeatedly trying to call a failing service by opening a circuit and providing fallback mechanisms.</div>
+        </li>
+        <li>What is Zuul in Spring Cloud?
+            <div class="answer">Zuul is an edge service provided by Spring Cloud Netflix that acts as a gateway for routing requests to different microservices. It provides features such as dynamic routing, monitoring, security, and resiliency.</div>
+        </li>
+        <li>What is a gateway in Microservices?
+            <div class="answer">A gateway in microservices is a single entry point for client requests. It routes requests to the appropriate microservices, handles authentication and authorization, and provides features such as load balancing, caching, and rate limiting.</div>
+        </li>
+        <li>What is Spring Boot Actuator?
+            <div class="answer">Spring Boot Actuator is a sub-project of Spring Boot that provides production-ready features such as monitoring, metrics, health checks, and auditing. It exposes endpoints to manage and monitor the application.</div>
+        </li>
+        <li>What is a REST Controller in Spring Boot?
+            <div class="answer">A REST Controller in Spring Boot is a specialized version of the @Controller annotation that is used to create RESTful web services. It is annotated with @RestController and provides methods to handle HTTP requests and return responses.</div>
+        </li>
+        <li>How do you handle exceptions in Spring Boot?
+            <div class="answer">You can handle exceptions in Spring Boot using @ExceptionHandler methods in a @ControllerAdvice class. This allows you to centralize exception handling and return custom error responses.</div>
+        </li>
+        <li>What is Feign in Spring Cloud?
+            <div class="answer">Feign is a declarative HTTP client provided by Spring Cloud Netflix. It simplifies the process of making HTTP requests to other microservices by providing a declarative syntax and integrating with Ribbon for load balancing.</div>
+        </li>
+        <li>What is Ribbon in Spring Cloud?
+            <div class="answer">Ribbon is a client-side load balancer provided by Spring Cloud Netflix. It allows microservices to distribute requests across multiple instances of a service, providing better performance and fault tolerance.</div>
+        </li>
+        <li>What is Sleuth in Spring Cloud?
+            <div class="answer">Sleuth is a distributed tracing tool provided by Spring Cloud. It adds trace and span IDs to requests and logs, allowing you to trace requests across multiple microservices and visualize the flow of requests in a distributed system.</div>
+        </li>
+        <li>What is Zipkin in Spring Cloud?
+            <div class="answer">Zipkin is a distributed tracing system that works with Spring Cloud Sleuth to collect and visualize trace data. It helps in diagnosing performance issues and understanding the flow of requests in a distributed system.</div>
+        </li>
+        <li>How do you create a custom annotation in Java?
+            <div class="answer">
+                To create a custom annotation in Java, you need to use the @interface keyword. You can also specify retention policies and target elements for the annotation. Here is an example:
+                <pre><code>
+        import java.lang.annotation.ElementType;
+        import java.lang.annotation.Retention;
+        import java.lang.annotation.RetentionPolicy;
+        import java.lang.annotation.Target;
+
+        @Retention(RetentionPolicy.RUNTIME)
+        @Target(ElementType.METHOD)
+        public @interface MyCustomAnnotation {
+            String value();
+        }
+                </code></pre>
+                In this example, the custom annotation @MyCustomAnnotation can be applied to methods and has a retention policy of RUNTIME, meaning it will be available at runtime.
+            </div>
+        </li>
+        <li>What is the purpose of the @RestController annotation?
+            <div class="answer">The @RestController annotation is used to create RESTful web services in a Spring Boot application. It combines the @Controller and @ResponseBody annotations to simplify the creation of REST endpoints.</div>
+        </li>
+        <li>What is the purpose of the @RequestMapping annotation?
+            <div class="answer">The @RequestMapping annotation is used to map HTTP requests to handler methods in a Spring Boot application. It can be applied at the class or method level to define the URL patterns and HTTP methods for the endpoints.</div>
+        </li>
+        <li>What is the purpose of the @PathVariable annotation?
+            <div class="answer">The @PathVariable annotation is used to bind a method parameter to a URI template variable in a Spring Boot application. It allows you to extract values from the URL and use them in the handler methods.</div>
+        </li>
+        <li>What is the purpose of the @RequestParam annotation?
+            <div class="answer">The @RequestParam annotation is used to bind a method parameter to a query parameter in a Spring Boot application. It allows you to extract values from the query string and use them in the handler methods.</div>
+        </li>
+        <li>What is the purpose of the @RequestBody annotation?
+            <div class="answer">The @RequestBody annotation is used to bind a method parameter to the body of an HTTP request in a Spring Boot application. It allows you to deserialize the request body into a Java object and use it in the handler methods.</div>
+        </li>
+        <li>What is the purpose of the @ResponseBody annotation?
+            <div class="answer">The @ResponseBody annotation is used to bind the return value of a method to the body of an HTTP response in a Spring Boot application. It allows you to serialize the return value into JSON or XML and send it as the response body.</div>
+        </li>
+        <li>What is the purpose of the @ExceptionHandler annotation?
+            <div class="answer">The @ExceptionHandler annotation is used to define a method as an exception handler in a Spring Boot application. It allows you to handle exceptions thrown by the handler methods and return custom error responses.</div>
+        </li>
+        <li>What is the purpose of the @ControllerAdvice annotation?
+            <div class="answer">The @ControllerAdvice annotation is used to define a global exception handler in a Spring Boot application. It allows you to handle exceptions thrown by any controller and return custom error responses.</div>
+        </li>
+        <li>What is the purpose of the @EnableAutoConfiguration annotation?
+            <div class="answer">The @EnableAutoConfiguration annotation is used to enable Spring Boot's auto-configuration feature. It automatically configures the application based on the dependencies and properties defined in the classpath.</div>
+        </li>
+        <li>What is the purpose of the @SpringBootApplication annotation?
+            <div class="answer">The @SpringBootApplication annotation is used to enable Spring Boot's auto-configuration, component scanning, and configuration properties features. It is a combination of @EnableAutoConfiguration, @ComponentScan, and @Configuration annotations.</div>
+        </li>
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Essential Microservices Patterns</h2>
+        <img src="media\gifs/microservices-patterns.gif" alt="Microservices Patterns" style="width:70%; max-width:600px; display:block; margin:0 auto;">
+        <ul>
+            <li><strong>Database Per Service Pattern:</strong>
+                <div class="answer">Each microservice is responsible for its own database, promoting loose coupling and ensuring complete data ownership.</div>
+            </li>
+            <li><strong>Event Sourcing Pattern:</strong>
+                <div class="answer">Instead of storing the current state, every change is recorded as an event. This is particularly useful for audit trails and debugging.</div>
+            </li>
+            <li><strong>API Gateway Pattern:</strong>
+                <div class="answer">Serves as a unified entry point, routing client requests to the appropriate microservices while managing concerns like authentication and rate limiting.</div>
+            </li>
+            <li><strong>Saga Pattern:</strong>
+                <div class="answer">Manages distributed transactions by executing a series of steps and compensating actions to handle potential failures.</div>
+            </li>
+            <li><strong>BFF (Backend for Frontend) Pattern:</strong>
+                <div class="answer">Provides tailored backends for different clients, such as web and mobile, optimizing performance and data handling for each.</div>
+            </li>
+        </ul>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
