@@ -1,10 +1,10 @@
 // Redirect to login page if not logged in (for protected pages)
-if (sessionStorage.getItem("isLoggedIn") !== "true" && !window.location.href.includes("login.html")) {
-    window.location.href = "login.html";
+if (sessionStorage.getItem("isLoggedIn") !== "true" && !window.location.href.includes("index.html")) {
+    window.location.href = "../index.html";
 }
 
 // Prevent back navigation to login page
-if (!window.location.href.includes("login.html")) {
+if (!window.location.href.includes("../index.html")) {
     history.pushState(null, null, location.href);
     window.onpopstate = function () {
         history.go(1);
@@ -14,7 +14,7 @@ if (!window.location.href.includes("login.html")) {
 // Logout function to clear session and redirect to login page
 function logout() {
     sessionStorage.removeItem("isLoggedIn"); // Clear login state
-    window.location.href = "index.html"; // Redirect to login page
+    window.location.href = "../index.html"; // Redirect to login page
 }
 
 // Login function for the login page
@@ -28,7 +28,7 @@ function login() {
 
     if (username === validUsername && password === validPassword) {
         sessionStorage.setItem("isLoggedIn", "true"); // Set login state
-        window.location.href = "home.html"; // Redirect to home page
+        window.location.href = "../Auth/home.html"; // Redirect to home page
     } else {
         message.style.color = "red";
         message.textContent = "Invalid username or password.";
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Load multiple components
-    loadComponent("common_navbar.html", "navbar"); // Load navbar
+    loadComponent("../common/common_navbar.html", "navbar"); // Load navbar
     // loadComponent("common_footer.html", "footer"); // Load footer
     // loadComponent("common_sidebar.html", "sidebar"); // Load sidebar (if needed)
 });

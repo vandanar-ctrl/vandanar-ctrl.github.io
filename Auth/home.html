@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Interview Questions</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div id="navbar"></div>
@@ -109,7 +109,7 @@
         <div class="section">
             <h2>Java interview questions</h2>
             <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="media\pdfs\Java_interview_questions.pdf" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="..\media\pdfs\Java_interview_questions.pdf" allowfullscreen></iframe>
             </div>
         </div>
         <div class="section">
@@ -518,12 +518,12 @@
         <div class="section">
             <div class="section">
                 <h2>API Roadmap</h2>
-                <img src="media\gifs/API_PROTOCOL.gif" alt="API Roadmap" style="width:70%; max-width:600px; display:block; margin:0 auto;">
+                <img src="..\media\gifs/API_PROTOCOL.gif" alt="API Roadmap" style="width:70%; max-width:600px; display:block; margin:0 auto;">
             </div>
             <div class="section">
                 <h2>Wide PDF Example</h2>
                 <div class="embed-responsive embed-responsive-16by9" style="width:100%; height:100vh;">
-                    <iframe class="embed-responsive-item" src="media\pdfs\Rest_API.pdf" style="width:100%; height:100%;" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item" src="..\media\pdfs\Rest_API.pdf" style="width:100%; height:100%;" allowfullscreen></iframe>
                 </div>
             </div>
             <h2>RestAPI</h2>
@@ -770,7 +770,7 @@
         </div>
         <div class="section">
             <h2>Comparing Architecture Styles</h2>
-            <img src="media\gifs/Comparing Architecture Styles.gif" alt="Comparing Architecture Styles" style="width:70%; max-width:600px; display:block; margin:0 auto;">
+            <img src="..\media\gifs/Comparing Architecture Styles.gif" alt="Comparing Architecture Styles" style="width:70%; max-width:600px; display:block; margin:0 auto;">
         </div>
         <div class="section">
             <h2>SAGA Pattern</h2>
@@ -785,8 +785,8 @@
                     <div class="answer">
                         <p>There are basically two types of Saga. In other words, there are two ways in which you can implement the Saga Pattern.</p>
                         <h3>Choreography-Based Saga</h3>
-                        <img src="media\gifs/choreography.png" alt="Choreography" style="width:70%; max-width:600px; display:block; margin:0 auto;">
-                        <img src="media\gifs/choreography-saga-pattern.png" alt="Choreography Saga Pattern" style="width:70%; max-width:600px; display:block; margin:0 auto;">
+                        <img src="..\media\gifs/choreography.png" alt="Choreography" style="width:70%; max-width:600px; display:block; margin:0 auto;">
+                        <img src="..\media\gifs/choreography-saga-pattern.png" alt="Choreography Saga Pattern" style="width:70%; max-width:600px; display:block; margin:0 auto;">
                         <p>In this type of Saga Implementation, each service publishes one or more domain events. These domain events trigger local transactions in other microservices.</p>
                         <p>Let’s understand what is happening in the above example:</p>
                         <ul>
@@ -798,8 +798,8 @@
                         <p>Now, this is a very simple example. In real life situations, there would be many business rules and steps involved to carry out such a distributed transaction. However, this example is only meant to demonstrate how Saga Pattern works.</p>
                         <p>The important thing to note here is that each service plays its part in the choreography. Each service is basically dependent on the events coming out from other services.</p>
                         <h3>Orchestration-Based Saga</h3>
-                        <img src="media\images\orchestration-saga-pattern.png" alt="Orchestration Saga Pattern" style="width:70%; max-width:600px; display:block; margin:0 auto;">
-                        <img src="media\images\orchestration-sequencing-logic.png" alt="Orchestration Sequencing Logic" style="width:70%; max-width:600px; display:block; margin:0 auto;">
+                        <img src="..\media\images\orchestration-saga-pattern.png" alt="Orchestration Saga Pattern" style="width:70%; max-width:600px; display:block; margin:0 auto;">
+                        <img src="..\media\images\orchestration-sequencing-logic.png" alt="Orchestration Sequencing Logic" style="width:70%; max-width:600px; display:block; margin:0 auto;">
                         <p>In Orchestration-Based Saga, there is an orchestrator. An orchestrator can also be thought of as a manager that directs the participant services to execute local transactions.</p>
                         <p>Let’s understand what’s happening in this approach:</p>
                         <ul>
@@ -825,7 +825,7 @@
         <div class="section">
             <div class="section"></div>
                 <h2>System Design Guide</h2>
-                <img src="media\gifs/System_Design.gif" alt="System Design Guide" style="width:70%; max-width:600px; display:block; margin:0 auto;">
+                <img src="..\media\gifs/System_Design.gif" alt="System Design Guide" style="width:70%; max-width:600px; display:block; margin:0 auto;">
             </div>
             <h2>Low-Level Design (LLD)</h2>
             <ul>
@@ -871,7 +871,7 @@
                         <li><strong>ParkingLot:</strong> Manages the parking slots and vehicles. It includes methods to park and unpark vehicles, find available slots, and display the parking lot status.</li>
                     </ul>
                     <h3>Class Diagram:</h3>
-                    <img src="media\images\parking_lot_class_diagram.png" alt="Parking Lot Class Diagram">
+                    <img src="..\media\images\parking_lot_class_diagram.png" alt="Parking Lot Class Diagram">
                     <h3>Sequence Diagram:</h3>
                     <div class="sequence-diagram">
                         <div class="actor">User</div>
@@ -1214,355 +1214,8 @@
                 <div class="answer">Some common architectural patterns used in HLD include the Layered Architecture, Microservices Architecture, Event-Driven Architecture, and Service-Oriented Architecture (SOA). These patterns provide guidelines for structuring and organizing the system's components and interactions.</div>
             </li>
             </ul>
-        </div>
-        <div class="section">
-            <h2>Azure Cloud and Spring Boot</h2>
-            <ul>
-            <li>What is Azure Cloud?
-                <div class="answer">Azure Cloud is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. It provides a wide range of cloud services, including computing, analytics, storage, and networking.</div>
-            </li>
-            <li>How do you deploy a Spring Boot application to Azure?
-                <div class="answer">You can deploy a Spring Boot application to Azure using Azure App Service, Azure Spring Cloud, or Azure Kubernetes Service (AKS). For example, using Azure App Service, you can create a new web app, configure the deployment settings, and deploy your Spring Boot application using Git, FTP, or a CI/CD pipeline.</div>
-            </li>
-            <li>What is Azure Spring Cloud?
-                <div class="answer">Azure Spring Cloud is a fully managed service for Spring Boot applications. It simplifies the deployment, management, and scaling of Spring Boot applications on Azure. It provides built-in support for service discovery, configuration management, and monitoring.</div>
-            </li>
-            <li>How do you create an Azure Spring Cloud service?
-                <div class="answer">You can create an Azure Spring Cloud service using the Azure portal, Azure CLI, or Azure Resource Manager templates. For example, using the Azure portal, you can navigate to the Azure Spring Cloud service, click "Create", and follow the steps to configure the service and deploy your Spring Boot application.</div>
-            </li>
-            <li>What is Azure App Service?
-                <div class="answer">Azure App Service is a fully managed platform for building, deploying, and scaling web apps. It supports multiple programming languages, including Java, and provides features such as auto-scaling, load balancing, and integrated CI/CD.</div>
-            </li>
-            <li>How do you configure a Spring Boot application for Azure App Service?
-                <div class="answer">To configure a Spring Boot application for Azure App Service, you need to create a web app in the Azure portal, configure the deployment settings, and deploy your application using Git, FTP, or a CI/CD pipeline. You can also use the Azure Maven Plugin to deploy your application directly from your development environment.</div>
-            </li>
-            <li>What is Azure Kubernetes Service (AKS)?
-                <div class="answer">Azure Kubernetes Service (AKS) is a managed Kubernetes service that simplifies the deployment, management, and scaling of containerized applications. It provides features such as automated upgrades, monitoring, and scaling.</div>
-            </li>
-            <li>How do you deploy a Spring Boot application to Azure Kubernetes Service (AKS)?
-                <div class="answer">To deploy a Spring Boot application to Azure Kubernetes Service (AKS), you need to containerize your application using Docker, create a Kubernetes deployment and service configuration, and deploy the application to your AKS cluster using kubectl or a CI/CD pipeline.</div>
-            </li>
-            <li>What is the Azure Maven Plugin?
-                <div class="answer">The Azure Maven Plugin is a tool that allows you to deploy Java applications to Azure from your development environment. It supports deploying to Azure App Service, Azure Spring Cloud, and Azure Kubernetes Service (AKS).</div>
-            </li>
-            <li>How do you use the Azure Maven Plugin to deploy a Spring Boot application?
-                <div class="answer">To use the Azure Maven Plugin to deploy a Spring Boot application, you need to add the plugin to your pom.xml file, configure the deployment settings, and run the mvn azure-webapp:deploy command to deploy your application to Azure App Service.</div>
-            </li>
-            <li>What is Azure Key Vault?
-                <div class="answer">Azure Key Vault is a cloud service for securely storing and accessing secrets, such as API keys, passwords, certificates, and cryptographic keys. It helps safeguard cryptographic keys and secrets used by cloud applications and services.</div>
-            </li>
-            <li>How do you integrate Azure Key Vault with a Spring Boot application?
-                <div class="answer">You can integrate Azure Key Vault with a Spring Boot application by using the Azure Key Vault Spring Boot Starter. Add the dependency to your pom.xml file, configure the Key Vault properties, and use the @Value annotation to inject secrets into your application.</div>
-            </li>
-            <li>What is Azure Blob Storage?
-                <div class="answer">Azure Blob Storage is a service for storing large amounts of unstructured data, such as text or binary data. It is designed for storing and serving large amounts of data, such as images, videos, and backups.</div>
-            </li>
-            <li>How do you upload a file to Azure Blob Storage using a Spring Boot application?
-                <div class="answer">To upload a file to Azure Blob Storage using a Spring Boot application, you need to add the Azure Storage Blob dependency to your pom.xml file, configure the storage account properties, and use the BlobServiceClient to upload the file.</div>
-            </li>
-            <li>What is an Azure Storage Account?
-                <div class="answer">An Azure Storage Account is a container that provides a unique namespace for storing data objects in Azure Blob Storage, Azure File Storage, Azure Queue Storage, and Azure Table Storage. It allows you to manage and access your storage resources.</div>
-            </li>
-            <li>How do you create an Azure Storage Account?
-                <div class="answer">You can create an Azure Storage Account using the Azure portal, Azure CLI, or Azure Resource Manager templates. For example, using the Azure portal, you can navigate to the Storage Accounts service, click "Create", and follow the steps to configure and create the storage account.</div>
-            </li>
-            <li>What is Azure Service Bus?
-                <div class="answer">Azure Service Bus is a fully managed enterprise message broker that allows you to decouple applications and services. It provides reliable message queuing and publish-subscribe messaging capabilities.</div>
-            </li>
-            <li>How do you send and receive messages using Azure Service Bus in a Spring Boot application?
-                <div class="answer">To send and receive messages using Azure Service Bus in a Spring Boot application, you need to add the Azure Service Bus dependency to your pom.xml file, configure the Service Bus properties, and use the ServiceBusSenderClient and ServiceBusReceiverClient to send and receive messages.</div>
-            </li>
-            <li>What is Azure Event Hub?
-                <div class="answer">Azure Event Hub is a fully managed, real-time data ingestion service that can stream millions of events per second. It is designed for big data and analytics scenarios, such as telemetry data from IoT devices and application logs.</div>
-            </li>
-            <li>How do you send and receive events using Azure Event Hub in a Spring Boot application?
-                <div class="answer">To send and receive events using Azure Event Hub in a Spring Boot application, you need to add the Azure Event Hubs dependency to your pom.xml file, configure the Event Hub properties, and use the EventHubProducerClient and EventHubConsumerClient to send and receive events.</div>
-            </li>
-            <li>What is Azure SQL Database?
-                <div class="answer">Azure SQL Database is a fully managed relational database service built on Microsoft SQL Server. It provides high availability, scalability, and security for your database workloads.</div>
-            </li>
-            <li>How do you connect a Spring Boot application to Azure SQL Database?
-                <div class="answer">To connect a Spring Boot application to Azure SQL Database, you need to add the JDBC driver dependency to your pom.xml file, configure the database connection properties in the application.properties file, and use Spring Data JPA or JDBC to interact with the database.</div>
-            </li>
-            <li>What is Azure Cosmos DB?
-                <div class="answer">Azure Cosmos DB is a globally distributed, multi-model database service that provides high availability, low latency, and scalability. It supports multiple data models, including document, key-value, graph, and column-family.</div>
-            </li>
-            <li>How do you connect a Spring Boot application to Azure Cosmos DB?
-                <div class="answer">To connect a Spring Boot application to Azure Cosmos DB, you need to add the Azure Cosmos DB Spring Boot Starter dependency to your pom.xml file, configure the Cosmos DB properties, and use Spring Data Cosmos to interact with the database.</div>
-            </li>
-            <li>What is Azure Functions?
-                <div class="answer">Azure Functions is a serverless compute service that allows you to run event-driven code without provisioning or managing servers. It supports multiple programming languages, including Java, and can be triggered by various events, such as HTTP requests, timers, and messages.</div>
-            </li>
-            <li>How do you create an Azure Function in a Spring Boot application?
-                <div class="answer">To create an Azure Function in a Spring Boot application, you need to add the Azure Functions dependency to your pom.xml file, create a function class with the @FunctionName annotation, and deploy the function to Azure using the Azure Functions Maven Plugin.</div>
-            </li>
-            <li>What is Azure Logic Apps?
-                <div class="answer">Azure Logic Apps is a cloud service that allows you to automate workflows and integrate applications, data, and services. It provides a visual designer for creating workflows and supports various connectors for integrating with different services.</div>
-            </li>
-            <li>How do you integrate Azure Logic Apps with a Spring Boot application?
-                <div class="answer">You can integrate Azure Logic Apps with a Spring Boot application by creating a Logic App that triggers an HTTP request to your Spring Boot application's REST endpoint. You can also use Logic Apps to process data and send it to your application.</div>
-            </li>
-            <li>What is Azure DevOps?
-                <div class="answer">Azure DevOps is a set of development tools and services for planning, developing, testing, and delivering software. It includes services such as Azure Repos, Azure Pipelines, Azure Boards, Azure Test Plans, and Azure Artifacts.</div>
-            </li>
-            <li>How do you set up a CI/CD pipeline for a Spring Boot application using Azure DevOps?
-                <div class="answer">To set up a CI/CD pipeline for a Spring Boot application using Azure DevOps, you need to create a new pipeline in Azure Pipelines, configure the build and release stages, and define the tasks for building, testing, and deploying your application.</div>
-            </li>
-            <li>What is Azure Monitor?
-                <div class="answer">Azure Monitor is a service for collecting, analyzing, and acting on telemetry data from your cloud and on-premises environments. It provides insights into the performance and health of your applications and infrastructure.</div>
-            </li>
-            <li>How do you monitor a Spring Boot application using Azure Monitor?
-                <div class="answer">To monitor a Spring Boot application using Azure Monitor, you need to configure Application Insights in your application. Add the Application Insights dependency to your pom.xml file, configure the instrumentation key, and use the Application Insights SDK to collect telemetry data.</div>
-            </li>
-            <li>What is Azure Active Directory (AAD)?
-                <div class="answer">Azure Active Directory (AAD) is a cloud-based identity and access management service that provides single sign-on, multi-factor authentication, and conditional access to secure your applications and data.</div>
-            </li>
-            <li>How do you integrate Azure Active Directory with a Spring Boot application?
-                <div class="answer">To integrate Azure Active Directory with a Spring Boot application, you need to add the Azure Active Directory Spring Boot Starter dependency to your pom.xml file, configure the AAD properties, and use the @PreAuthorize annotation to secure your endpoints.</div>
-            </li>
-            <li>What is Azure API Management?
-                <div class="answer">Azure API Management is a service for creating, publishing, and managing APIs. It provides features such as API gateways, security, analytics, and developer portals.</div>
-            </li>
-            <li>How do you publish a Spring Boot API to Azure API Management?
-                <div class="answer">To publish a Spring Boot API to Azure API Management, you need to create an API in the Azure API Management service, configure the API settings, and import the OpenAPI specification or manually define the API endpoints.</div>
-            </li>
-            <li>What is Azure Logic Apps?
-                <div class="answer">Azure Logic Apps is a cloud service that allows you to automate workflows and integrate applications, data, and services. It provides a visual designer for creating workflows and supports various connectors for integrating with different services.</div>
-            </li>
-            <li>How do you integrate Azure Logic Apps with a Spring Boot application?
-                <div class="answer">You can integrate Azure Logic Apps with a Spring Boot application by creating a Logic App that triggers an HTTP request to your Spring Boot application's REST endpoint. You can also use Logic Apps to process data and send it to your application.</div>
-            </li>
-            <li>What is Azure DevOps?
-                <div class="answer">Azure DevOps is a set of development tools and services for planning, developing, testing, and delivering software. It includes services such as Azure Repos, Azure Pipelines, Azure Boards, Azure Test Plans, and Azure Artifacts.</div>
-            </li>
-            <li>How do you set up a CI/CD pipeline for a Spring Boot application using Azure DevOps?
-                <div class="answer">To set up a CI/CD pipeline for a Spring Boot application using Azure DevOps, you need to create a new pipeline in Azure Pipelines, configure the build and release stages, and define the tasks for building, testing, and deploying your application.</div>
-            </li>
-            <li>What is Azure Monitor?
-                <div class="answer">Azure Monitor is a service for collecting, analyzing, and acting on telemetry data from your cloud and on-premises environments. It provides insights into the performance and health of your applications and infrastructure.</div>
-            </li>
-            <li>How do you monitor a Spring Boot application using Azure Monitor?
-                <div class="answer">To monitor a Spring Boot application using Azure Monitor, you need to configure Application Insights in your application. Add the Application Insights dependency to your pom.xml file, configure the instrumentation key, and use the Application Insights SDK to collect telemetry data.</div>
-            </li>
-            <li>What is Azure Active Directory (AAD)?
-                <div class="answer">Azure Active Directory (AAD) is a cloud-based identity and access management service that provides single sign-on, multi-factor authentication, and conditional access to secure your applications and data.</div>
-            </li>
-            <li>How do you integrate Azure Active Directory with a Spring Boot application?
-                <div class="answer">To integrate Azure Active Directory with a Spring Boot application, you need to add the Azure Active Directory Spring Boot Starter dependency to your pom.xml file, configure the AAD properties, and use the @PreAuthorize annotation to secure your endpoints.</div>
-            </li>
-            <li>What is Azure API Management?
-                <div class="answer">Azure API Management is a service for creating, publishing, and managing APIs. It provides features such as API gateways, security, analytics, and developer portals.</div>
-            </li>
-            <li>How do you publish a Spring Boot API to Azure API Management?
-                <div class="answer">To publish a Spring Boot API to Azure API Management, you need to create an API in the Azure API Management service, configure the API settings, and import the OpenAPI specification or manually define the API endpoints.</div>
-            </li>
-            </ul>
-        </div>
-        
-    <div class="section">
-        <h2>Docker - Java Microservices</h2>
-        <ul>
-        <li>What is Docker?
-            <div class="answer">Docker is an open-source platform that automates the deployment, scaling, and management of applications using containerization. Containers are lightweight, portable, and run consistently across different environments.</div>
-        </li>
-        <li>What is a Docker container?
-            <div class="answer">A Docker container is a lightweight, standalone, and executable package that includes everything needed to run a piece of software, including the code, runtime, libraries, and dependencies.</div>
-        </li>
-        <li>How do you create a Dockerfile for a Java microservice?
-            <div class="answer">
-            <p>A Dockerfile is a text file that contains instructions for building a Docker image. Here is an example Dockerfile for a Java microservice:</p>
-            <pre><code>
-        # Use an official OpenJDK runtime as a parent image
-        FROM openjdk:11-jre-slim
-
-        # Set the working directory in the container
-        WORKDIR /app
-
-        # Copy the JAR file into the container
-        COPY target/my-microservice.jar /app/my-microservice.jar
-
-        # Expose the port the application runs on
-        EXPOSE 8080
-
-        # Run the JAR file
-        ENTRYPOINT ["java", "-jar", "my-microservice.jar"]
-            </code></pre>
-            </div>
-        </li>
-        <li>How do you build a Docker image for a Java microservice?
-            <div class="answer">
-            <p>To build a Docker image for a Java microservice, navigate to the directory containing the Dockerfile and run the following command:</p>
-            <pre><code>docker build -t my-microservice:latest .</code></pre>
-            </div>
-        </li>
-        <li>How do you run a Docker container for a Java microservice?
-            <div class="answer">
-            <p>To run a Docker container for a Java microservice, use the following command:</p>
-            <pre><code>docker run -d -p 8080:8080 my-microservice:latest</code></pre>
-            <p>This command runs the container in detached mode and maps port 8080 of the container to port 8080 on the host machine.</div>
-        </li>
-        <li>How do you use Docker Compose to manage multiple Java microservices?
-            <div class="answer">
-            <p>Docker Compose is a tool for defining and running multi-container Docker applications. Here is an example docker-compose.yml file for managing multiple Java microservices:</p>
-            <pre><code>
-        version: '3'
-        services:
-          service1:
-        image: my-microservice1:latest
-        ports:
-          - "8081:8080"
-          service2:
-        image: my-microservice2:latest
-        ports:
-          - "8082:8080"
-            </code></pre>
-            <p>To start the services, run the following command:</p>
-            <pre><code>docker-compose up -d</code></pre>
-            </div>
-        </li>
-        <li>How do you scale Java microservices using Docker Compose?
-            <div class="answer">
-            <p>To scale Java microservices using Docker Compose, use the --scale option with the docker-compose up command. For example, to scale service1 to 3 instances, run:</p>
-            <pre><code>docker-compose up -d --scale service1=3</code></pre>
-            </div>
-        </li>
-        <li>How do you monitor Docker containers running Java microservices?
-            <div class="answer">
-            <p>You can monitor Docker containers running Java microservices using tools like Docker stats, Prometheus, Grafana, and cAdvisor. For example, to view real-time statistics of running containers, use:</p>
-            <pre><code>docker stats</code></pre>
-            </div>
-        </li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Redis and Spring Boot</h2>
-        <ul>
-            <li>What is Redis?
-                <div class="answer">Redis is an open-source, in-memory data structure store that can be used as a database, cache, and message broker. It supports various data structures such as strings, hashes, lists, sets, and more.</div>
-            </li>
-            <li>How do you integrate Redis with a Spring Boot application?
-                <div class="answer">To integrate Redis with a Spring Boot application, you need to add the Spring Data Redis dependency to your pom.xml file, configure the Redis connection properties, and use the RedisTemplate or StringRedisTemplate to interact with Redis.</div>
-            </li>
-            <li>What is the purpose of the @EnableRedisRepositories annotation?
-                <div class="answer">The @EnableRedisRepositories annotation is used to enable Redis repositories in a Spring Boot application. It allows you to create repository interfaces for Redis data access.</div>
-            </li>
-            <li>How do you use the @Cacheable annotation with Redis?
-                <div class="answer">The @Cacheable annotation is used to cache the result of a method in Redis. When the method is called, the result is stored in the cache, and subsequent calls with the same parameters return the cached result. For example:
-                    <pre><code>@Service
-    public class MyService {
-        @Cacheable(value = "myCache", key = "#id")
-        public MyObject getMyObjectById(String id) {
-            // Method implementation
-        }
-    }</code></pre>
-                </div>
-            </li>
-            <li>How do you use the @CachePut annotation with Redis?
-                <div class="answer">The @CachePut annotation is used to update the cache with the result of a method. It ensures that the cache is updated with the latest data. For example:
-                    <pre><code>@Service
-    public class MyService {
-        @CachePut(value = "myCache", key = "#id")
-        public MyObject updateMyObject(String id, MyObject myObject) {
-            // Method implementation
-        }
-    }</code></pre>
-                </div>
-            </li>
-            <li>How do you use the @CacheEvict annotation with Redis?
-                <div class="answer">The @CacheEvict annotation is used to remove an entry from the cache. It ensures that the cache is cleared when the annotated method is called. For example:
-                    <pre><code>@Service
-    public class MyService {
-        @CacheEvict(value = "myCache", key = "#id")
-        public void deleteMyObject(String id) {
-            // Method implementation
-        }
-    }</code></pre>
-                </div>
-            </li>
-            <li>How do you configure Redis in a Spring Boot application?
-                <div class="answer">To configure Redis in a Spring Boot application, add the following properties to your application.properties file:
-                    <pre><code>spring.redis.host=localhost
-    spring.redis.port=6379</code></pre>
-                </div>
-            </li>
-            <li>Example of using RedisTemplate in a Spring Boot application:
-                <div class="answer">
-                    <pre><code>@Service
-    public class RedisService {
-        private final RedisTemplate<String, Object> redisTemplate;
-
-        @Autowired
-        public RedisService(RedisTemplate<String, Object> redisTemplate) {
-            this.redisTemplate = redisTemplate;
-        }
-
-        public void save(String key, Object value) {
-            redisTemplate.opsForValue().set(key, value);
-        }
-
-        public Object get(String key) {
-            return redisTemplate.opsForValue().get(key);
-        }
-
-        public void delete(String key) {
-            redisTemplate.delete(key);
-        }
-    }</code></pre>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Kubernetes - AKS</h2>
-        <ul>
-            <li>What is Kubernetes?
-                <div class="answer">Kubernetes is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications. It provides a framework to run distributed systems resiliently.</div>
-            </li>
-            <li>What is Azure Kubernetes Service (AKS)?
-                <div class="answer">Azure Kubernetes Service (AKS) is a managed Kubernetes service provided by Microsoft Azure. It simplifies the deployment, management, and operations of Kubernetes by offloading much of the operational overhead to Azure.</div>
-            </li>
-            <li>How do you create an AKS cluster?
-                <div class="answer">You can create an AKS cluster using the Azure portal, Azure CLI, or Azure Resource Manager templates. For example, using the Azure CLI, you can create a cluster with the following command:
-                    <pre><code>az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 3 --enable-addons monitoring --generate-ssh-keys</code></pre>
-                </div>
-            </li>
-            <li>How do you deploy a Java microservice to AKS?
-                <div class="answer">To deploy a Java microservice to AKS, you need to containerize your application using Docker, push the Docker image to a container registry, create Kubernetes deployment and service YAML files, and apply them to your AKS cluster using kubectl. For example:
-                    <pre><code>kubectl apply -f deployment.yaml
-    kubectl apply -f service.yaml</code></pre>
-                </div>
-            </li>
-            <li>How do you scale a deployment in AKS?
-                <div class="answer">You can scale a deployment in AKS using the kubectl scale command. For example, to scale a deployment named my-deployment to 5 replicas, run:
-                    <pre><code>kubectl scale deployment my-deployment --replicas=5</code></pre>
-                </div>
-            </li>
-            <li>How do you monitor an AKS cluster?
-                <div class="answer">You can monitor an AKS cluster using Azure Monitor for containers, which provides insights into the performance and health of your cluster. You can also use tools like Prometheus and Grafana for more advanced monitoring and visualization.</div>
-            </li>
-            <li>How do you update a deployment in AKS?
-                <div class="answer">To update a deployment in AKS, you can modify the deployment YAML file and apply the changes using kubectl apply. For example:
-                    <pre><code>kubectl apply -f updated-deployment.yaml</code></pre>
-                </div>
-            </li>
-            <li>How do you roll back a deployment in AKS?
-                <div class="answer">You can roll back a deployment in AKS using the kubectl rollout undo command. For example, to roll back the last deployment of my-deployment, run:
-                    <pre><code>kubectl rollout undo deployment my-deployment</code></pre>
-                </div>
-            </li>
-            <li>How do you expose a deployment in AKS?
-                <div class="answer">You can expose a deployment in AKS by creating a Kubernetes service. For example, to expose a deployment named my-deployment as a LoadBalancer service, create a service YAML file and apply it using kubectl:
-                    <pre><code>kubectl apply -f service.yaml</code></pre>
-                </div>
-            </li>
-            <li>How do you manage secrets in AKS?
-                <div class="answer">You can manage secrets in AKS using Kubernetes Secrets. Create a secret using kubectl create secret and reference it in your deployment YAML file. For example:
-                    <pre><code>kubectl create secret generic my-secret --from-literal=username=myuser --from-literal=password=mypassword</code></pre>
-                </div>
-            </li>
-        </ul>
-    </div>
- <!-- Link to the external JavaScript file -->
-    <script src="javascript\common.js"></script>
+        </div></div>
+         <!-- Link to the external JavaScript file -->
+    <script src="../javascript/common.js"></script>
 </body>
 </html>
