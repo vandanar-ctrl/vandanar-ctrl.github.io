@@ -17,24 +17,47 @@
           allowfullscreen
         ></iframe>
       </div>
-      <div class="container">
-        <br><br>
-
-        <iframe frameborder="0" height="400px" id="oc-editor" width="100%" src="https://onecompiler.com/embed/java?codeChangeEvent=true&amp;listenToEvents=true&amp;hideNew=true"></iframe>
-
-        <br>
-        <div class="input-group">
-
-            <span class="input-group-text">code</span>
-
-            <textarea class="form-control" rows="10" aria-label="With textarea" id="parent-code-capture"></textarea>
-        </div>
-        <br>
-        <button type="button" onclick="javascript:triggerRun()" class="btn btn-primary">Trigger Run</button>
-        <button type="button" onclick="javascript:sendCodeToEditor()" class="btn btn-warning">
-            Send Code to Editor</button>
-
-    </div>
+            <div class="container my-5">
+          <div class="card shadow-sm border-0">
+              <div class="card-body">
+                  <h5 class="card-title text-center">Java Code Editor</h5>
+                  <div class="mb-4">
+                      <iframe 
+                          frameborder="0" 
+                          height="400px" 
+                          id="oc-editor" 
+                          width="100%" 
+                          src="https://onecompiler.com/embed/java?codeChangeEvent=true&amp;listenToEvents=true&amp;hideNew=true" 
+                          class="rounded shadow-sm">
+                      </iframe>
+                  </div>
+                  <div class="input-group mb-3">
+                      <span class="input-group-text bg-primary text-white">Code</span>
+                      <textarea 
+                          class="form-control" 
+                          rows="10" 
+                          aria-label="With textarea" 
+                          id="parent-code-capture" 
+                          placeholder="Write your code here...">
+                      </textarea>
+                  </div>
+                  <div class="d-flex justify-content-center gap-3">
+                      <button 
+                          type="button" 
+                          onclick="javascript:triggerRun()" 
+                          class="btn btn-primary shadow-sm">
+                          Trigger Run
+                      </button>
+                      <button 
+                          type="button" 
+                          onclick="javascript:sendCodeToEditor()" 
+                          class="btn btn-warning shadow-sm">
+                          Send Code to Editor
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
   <!-- Link to the external JavaScript file -->
   <script src="../javascript/common.js"></script>
