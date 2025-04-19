@@ -17,6 +17,24 @@
           allowfullscreen
         ></iframe>
       </div>
+      <div class="container">
+        <br><br>
+
+        <iframe frameborder="0" height="400px" id="oc-editor" width="100%" src="https://onecompiler.com/embed/java?codeChangeEvent=true&amp;listenToEvents=true&amp;hideNew=true"></iframe>
+
+        <br>
+        <div class="input-group">
+
+            <span class="input-group-text">code</span>
+
+            <textarea class="form-control" rows="10" aria-label="With textarea" id="parent-code-capture"></textarea>
+        </div>
+        <br>
+        <button type="button" onclick="javascript:triggerRun()" class="btn btn-primary">Trigger Run</button>
+        <button type="button" onclick="javascript:sendCodeToEditor()" class="btn btn-warning">
+            Send Code to Editor</button>
+
+    </div>
     </div>
   <!-- Link to the external JavaScript file -->
   <script src="../javascript/common.js"></script>
