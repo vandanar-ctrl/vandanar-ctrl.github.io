@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mics life saving snippets</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    </style>
+</head>
+<body> <div id="navbar"></div>  <div class="container">
+    <div class="card">
+        <h2>Frequncy of each Element in an Array</h2>
+        <pre><code class="language-java">
+            for (int num : arr) {
+
+            // Store frequency of each unique element.
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+    </code></pre>
+    </div>
+ <!-- Link to the external JavaScript file -->
+ <script src="../javascript/common.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+<!-- and it's easy to individually load additional languages -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+</body>
+</html>
