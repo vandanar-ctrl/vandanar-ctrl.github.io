@@ -3,29 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mics life saving snippets</title>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-    </style>
+    <title>Misc Life-Saving Snippets</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Prism.js Theme (Dark) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 </head>
-<body> <div id="navbar"></div>  <div class="container">
-    <div class="card">
-        <h2>Frequncy of each Element in an Array</h2>
-        <pre><code class="language-java">
-            for (int num : arr) {
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
 
+    <!-- Container -->
+    <div class="container">
+        <div class="card" style="width: 75%;">
+            <div class="title"
+                 style="background-color: #f0f0f0; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                <h2>Frequency of Each Element in an Array</h2>
+                <div style="max-height: 200px; overflow-y: auto; overflow-x: auto;">
+                    <pre><code class="language-java">
+        for (int num : arr) {
             // Store frequency of each unique element.
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
-    </code></pre>
-    </div>
- <!-- Link to the external JavaScript file -->
- <script src="../javascript/common.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+        </div>
 
-<!-- and it's easy to individually load additional languages -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
-
-<script>hljs.highlightAll();</script>
+    <!-- External JavaScript -->
+    <script src="../javascript/common.js"></script>
+    <!-- Prism.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <!-- Prism.js Java Language Support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
 </body>
 </html>
