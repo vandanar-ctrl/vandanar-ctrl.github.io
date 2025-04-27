@@ -14,21 +14,38 @@
 
     <!-- Container -->
     <div class="container">
-        <div class="card" style="width: 75%;">
-            <div class="title"
-                 style="background-color: #f0f0f0; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+        <div class="card">
+            <div class="title" style="background-color: #f0f0f0; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
                 <h2>Frequency of Each Element in an Array</h2>
-                <div style="max-height: 200px; overflow-y: auto; overflow-x: auto;">
+                <div>
                     <pre><code class="language-java">
-        for (int num : arr) {
+    for (int num : arr) {
             // Store frequency of each unique element.
             map.put(num, map.getOrDefault(num, 0) + 1);
-        }
+    }
                     </code></pre>
                 </div>
             </div>
         </div>
+        <div class="card" style=" margin-top: 1rem;">
+            <div class="title" style="background-color: #f0f0f0; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                <h2>Rotate an Array</h2>
+                <div>
+                    <pre><code class="language-java">
+    public static ArrayList&lt;Integer&gt; rotate(ArrayList&lt;Integer&gt; arr, int n) {
+        n = n % arr.size(); // Ensure valid rotation
+
+        ArrayList&lt;Integer&gt; rotated = new ArrayList&lt;&gt;();
+        rotated.addAll(arr.subList(arr.size() - n, arr.size())); // Last n elements at start
+        rotated.addAll(arr.subList(0, arr.size() - n)); // First part at the end
+
+        return rotated;
+    }
+                    </code></pre>
+                </div>
+            </div>
         </div>
+    </div>
 
     <!-- External JavaScript -->
     <script src="../javascript/common.js"></script>
