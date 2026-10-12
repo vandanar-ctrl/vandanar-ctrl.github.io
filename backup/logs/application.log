@@ -69069,3 +69069,33 @@ RuntimeError: Source completeness gate failed for java_interview: 32 unresolved 
 2026-10-12 10:21:09,831 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
 2026-10-12 10:21:09,851 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
 2026-10-12 10:21:09,851 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-12 10:43:42,390 - anki_forge.generation.social_ingest - INFO - Social ingest complete: D:\ANKI\data\requests\social_downloads\java_interview\java_interview_reels.tsv
+2026-10-12 10:43:42,391 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST TSV exam=java_interview tsv_path=D:\ANKI\data\requests\social_downloads\java_interview\java_interview_reels.tsv
+2026-10-12 10:43:42,438 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-12 10:43:42,471 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-12 10:43:42,471 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-12 10:43:42,583 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-12 10:43:42,621 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-12 10:43:42,622 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-12 10:43:43,984 - anki_forge.pipelines.transcript_ingest_stage - WARNING - 281 reel_id(s) marked processed in the checkpoint but have no cards in the database (exam=java_interview) - regenerating them: ['C__2OXlAamX', 'C_kcXFxyTp-', 'C_sTzOwSXow', 'C_xpac5MnHB', 'CgcJImrB_IA', 'DAF_1gkRYnH', 'DHO3H2kv8WL', 'DK2sDbyS2B7', 'DKFBZyRNAnC', 'DKS24z_yl3r']...
+2026-10-12 11:13:34,767 - anki_forge.generation.social_ingest - INFO - [DTVy9cCk72C] audio fallback was too weak; trying Gemini visual pass
+2026-10-12 11:13:35,835 - anki_forge.generation.social_ingest - WARNING - [DTVy9cCk72C] visual fallback request metadata: path=D:\ANKI\data\requests\social_downloads\japanese\blackbeltjapanese\DTVy9cCk72C.mp4 mime_type=video/mp4 size_mb=1.00 model=gemini-3.8-flash use_vertex=True prompt_chars=0
+2026-10-12 11:13:37,615 - anki_forge.gemini.client - WARNING - Gemini multimodal request details: model=gemini-3.8-flash mime_type=video/mp4 file_size_mb=1.00 use_vertex=True response_mime_type=application/json input_part_count=2 prompt_chars=4698
+2026-10-12 11:13:37,810 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 11:14:21,613 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.8-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 11:14:22,569 - anki_forge.generation.social_ingest - INFO - [DTVy9cCk72C] visual pass marked video not useful: The video is a brief movie dialogue clip showing a single philosophical quote with subtitle translations, lacking direct linguistic instruction, grammar breakdown, or testable concept explanations.
+2026-10-12 11:14:28,608 - anki_forge.generation.social_ingest - INFO - Social ingest complete: D:\ANKI\data\requests\social_downloads\japanese\japanese_reels.tsv
+2026-10-12 11:14:28,664 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST TSV exam=japanese tsv_path=D:\ANKI\data\requests\social_downloads\japanese\japanese_reels.tsv
+2026-10-12 11:14:28,665 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST COMPLETED exam=japanese status=SKIPPED detail=ingest_only_or_interrupted
+2026-10-12 11:18:09,683 - anki_forge.pipelines.transcript_ingest_stage - INFO - 5549 rows in TSV, 0 pending (5792 fully processed, 0 already classified)
+2026-10-12 11:18:09,733 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST COMPLETED exam=java_interview reels_discovered=0 reels_processed=0 reels_ignored=0 reels_failed=0 reels_pending=0
+2026-10-12 11:18:10,290 - anki_forge.pipelines.build_deck_stage - INFO - BUILD_DECK START exam=java_interview stage=source_gate
+2026-10-12 11:18:42,203 - anki_forge.pipelines.build_deck_stage - INFO - SOURCE COMPLETENESS GATE exam=java_interview status=FAIL blocking_reasons=['32 unresolved source artifact(s)']
+2026-10-12 11:18:42,204 - anki_forge.pipelines._shared - ERROR - build-deck for java_interview failed with an unexpected error - work already saved to the database up to this point is safe. Backing up before exiting.
+Traceback (most recent call last):
+  File "D:\ANKI\src\anki_forge\pipelines\_shared.py", line 72, in _graceful_run
+    yield
+  File "D:\ANKI\src\anki_forge\pipelines\build_deck_stage.py", line 32, in build_deck
+    raise RuntimeError(
+RuntimeError: Source completeness gate failed for java_interview: 32 unresolved source artifact(s)
+2026-10-12 11:19:01,880 - anki_forge.utils.backup - INFO - Database synced: db\anki_cards.db -> D:\backup\anki_cards.db
