@@ -68883,3 +68883,189 @@ RuntimeError: Source completeness gate failed for java_interview: 32 unresolved 
 2026-10-11 19:35:20,894 - anki_forge.generation.social_ingest - INFO - [DMc0H4iSfhQ] submitting Chirp 3 job
 2026-10-11 19:35:33,278 - anki_forge.generation.social_ingest - INFO - [DMDhzfzyjcR] submitting Chirp 3 job
 2026-10-11 19:35:51,545 - anki_forge.generation.social_ingest - INFO - [DMFe8fxyyCp] submitting Chirp 3 job
+2026-10-11 22:23:10,514 - anki_forge.generation.social_ingest - WARNING - [chirp3 DMFe8fxyyCp] attempt 1/6 failed: ResourceExhausted; sleeping 7.2s
+2026-10-11 22:23:17,859 - anki_forge.generation.social_ingest - INFO - [DMFe8fxyyCp] submitting Chirp 3 job
+2026-10-11 22:23:32,508 - anki_forge.generation.social_ingest - WARNING - [chirp3 DMFe8fxyyCp] attempt 2/6 failed: ResourceExhausted; sleeping 7.1s
+2026-10-11 22:23:39,606 - anki_forge.generation.social_ingest - INFO - [DMFe8fxyyCp] submitting Chirp 3 job
+2026-10-11 22:23:42,417 - anki_forge.generation.social_ingest - WARNING - [chirp3 DMFe8fxyyCp] attempt 3/6 failed: ResourceExhausted; sleeping 31.4s
+2026-10-11 22:24:13,850 - anki_forge.generation.social_ingest - INFO - [DMFe8fxyyCp] submitting Chirp 3 job
+2026-10-11 22:29:02,160 - anki_forge.generation.social_ingest - WARNING - Interrupt received; finishing current step and shutting down cleanly.
+2026-10-11 22:29:15,129 - anki_forge.generation.social_ingest - WARNING - Second interrupt received; exiting immediately.
+2026-10-11 22:29:17,131 - anki_forge.generation.social_ingest - INFO - Social ingest complete: D:\ANKI\data\requests\social_downloads\japanese\japanese_reels.tsv
+2026-10-11 22:29:17,231 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST TSV exam=japanese tsv_path=D:\ANKI\data\requests\social_downloads\japanese\japanese_reels.tsv
+2026-10-11 22:29:17,232 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST COMPLETED exam=japanese status=SKIPPED detail=ingest_only_or_interrupted
+2026-10-11 22:30:06,233 - anki_forge.cli.main - INFO - stale_source_artifact_cleanup exam=java_interview matched=0 deleted_artifacts=0 deleted_units=0 dry_run=False
+2026-10-11 22:43:00,362 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-11 22:43:00,363 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-11 22:43:00,390 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-11 22:43:00,392 - google_genai.models - WARNING - Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+2026-10-11 22:43:02,085 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-11 22:43:06,103 - anki_forge.cli.main - INFO - PRODUCTION RUN START exam=java_interview mode=default pdf_input_dir=data/requests/incoming
+2026-10-11 22:43:06,119 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-11 22:43:06,144 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-11 22:43:06,145 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-11 22:43:07,839 - anki_forge.pipelines.folder_ingest_stage - INFO - Exam java_interview card taxonomy: source=topic, count=10, allowed_types=concept, direct_interview, scenario, coding, output_prediction, comparison, debugging, design_reasoning, follow_up, trap_question
+2026-10-11 22:43:08,105 - anki_forge.pipelines.folder_ingest_stage - INFO - 0 new file(s) to process in data/requests/incoming (4 already processed)
+2026-10-11 22:43:08,110 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST START exam=java_interview sources_file=None output_dir=None profile=mild
+2026-10-11 22:43:09,801 - anki_forge.generation.social_ingest - INFO - ffmpeg: C:\ProgramData\chocolatey\bin\ffmpeg.EXE | ffprobe: C:\ProgramData\chocolatey\bin\ffprobe.EXE
+2026-10-11 22:43:49,220 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-11 22:43:49,220 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.8-flash retries=5 use_vertex=True timeout=120s
+2026-10-11 22:43:49,243 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-11 22:43:49,243 - google_genai.models - WARNING - Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+2026-10-11 22:43:50,849 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.8-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-11 22:43:54,493 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST START exam=japanese sources_file=config/exams/japanese/social_sources.txt output_dir=None profile=aggressive
+2026-10-11 22:43:54,517 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST RECOVERY MODE exam=japanese output_dir=D:\ANKI\data\requests\social_downloads\japanese
+2026-10-11 22:43:54,540 - anki_forge.generation.social_ingest - INFO - ffmpeg: C:\ProgramData\chocolatey\bin\ffmpeg.EXE | ffprobe: C:\ProgramData\chocolatey\bin\ffprobe.EXE
+2026-10-11 22:45:53,496 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-11 22:45:53,529 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-11 22:45:53,530 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.8-flash retries=5 use_vertex=True timeout=120s
+2026-10-11 22:51:27,507 - anki_forge.generation.social_ingest - INFO - [DMFe8fxyyCp] submitting Chirp 3 job
+2026-10-11 22:52:21,539 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-11 22:52:21,559 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-11 22:52:21,560 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-11 23:16:16,298 - anki_forge.generation.social_ingest - INFO - Social ingest complete: D:\ANKI\data\requests\social_downloads\java_interview\java_interview_reels.tsv
+2026-10-11 23:16:16,298 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST TSV exam=java_interview tsv_path=D:\ANKI\data\requests\social_downloads\java_interview\java_interview_reels.tsv
+2026-10-11 23:16:16,383 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-11 23:16:16,424 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-11 23:16:16,425 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-11 23:16:16,593 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-11 23:16:16,636 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-11 23:16:16,637 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-11 23:17:00,564 - anki_forge.pipelines.transcript_ingest_stage - WARNING - 281 reel_id(s) marked processed in the checkpoint but have no cards in the database (exam=java_interview) - regenerating them: ['C__2OXlAamX', 'C_kcXFxyTp-', 'C_sTzOwSXow', 'C_xpac5MnHB', 'CgcJImrB_IA', 'DAF_1gkRYnH', 'DHO3H2kv8WL', 'DK2sDbyS2B7', 'DKFBZyRNAnC', 'DKS24z_yl3r']...
+2026-10-11 23:51:26,647 - anki_forge.pipelines.transcript_ingest_stage - INFO - 5549 rows in TSV, 0 pending (5792 fully processed, 0 already classified)
+2026-10-11 23:51:26,687 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST COMPLETED exam=java_interview reels_discovered=0 reels_processed=0 reels_ignored=0 reels_failed=0 reels_pending=0
+2026-10-11 23:51:27,082 - anki_forge.pipelines.build_deck_stage - INFO - BUILD_DECK START exam=java_interview stage=source_gate
+2026-10-11 23:51:52,125 - anki_forge.pipelines.build_deck_stage - INFO - SOURCE COMPLETENESS GATE exam=java_interview status=FAIL blocking_reasons=['32 unresolved source artifact(s)']
+2026-10-11 23:51:52,125 - anki_forge.pipelines._shared - ERROR - build-deck for java_interview failed with an unexpected error - work already saved to the database up to this point is safe. Backing up before exiting.
+Traceback (most recent call last):
+  File "D:\ANKI\src\anki_forge\pipelines\_shared.py", line 72, in _graceful_run
+    yield
+  File "D:\ANKI\src\anki_forge\pipelines\build_deck_stage.py", line 32, in build_deck
+    raise RuntimeError(
+RuntimeError: Source completeness gate failed for java_interview: 32 unresolved source artifact(s)
+2026-10-11 23:52:14,368 - anki_forge.utils.backup - INFO - Database synced: db\anki_cards.db -> D:\backup\anki_cards.db
+2026-10-12 02:06:47,551 - anki_forge.generation.social_ingest - WARNING - [chirp3 DMFe8fxyyCp] attempt 1/6 failed: ResourceExhausted; sleeping 7.5s
+2026-10-12 02:06:55,071 - anki_forge.generation.social_ingest - INFO - [DMFe8fxyyCp] submitting Chirp 3 job
+2026-10-12 02:07:45,897 - anki_forge.generation.social_ingest - WARNING - [chirp3 DMFe8fxyyCp] attempt 2/6 failed: ResourceExhausted; sleeping 5.1s
+2026-10-12 02:07:51,005 - anki_forge.generation.social_ingest - INFO - [DMFe8fxyyCp] submitting Chirp 3 job
+2026-10-12 02:07:52,972 - anki_forge.generation.social_ingest - WARNING - [chirp3 DMFe8fxyyCp] attempt 3/6 failed: ResourceExhausted; sleeping 37.7s
+2026-10-12 02:08:30,633 - anki_forge.generation.social_ingest - INFO - [DMFe8fxyyCp] submitting Chirp 3 job
+2026-10-12 02:08:32,541 - anki_forge.generation.social_ingest - WARNING - [chirp3 DMFe8fxyyCp] attempt 4/6 failed: ResourceExhausted; sleeping 77.0s
+2026-10-12 02:09:49,570 - anki_forge.generation.social_ingest - INFO - [DMFe8fxyyCp] submitting Chirp 3 job
+2026-10-12 02:09:50,466 - anki_forge.generation.social_ingest - WARNING - [chirp3 DMFe8fxyyCp] attempt 5/6 failed: ResourceExhausted; sleeping 18.6s
+2026-10-12 02:10:09,066 - anki_forge.generation.social_ingest - INFO - [DMFe8fxyyCp] submitting Chirp 3 job
+2026-10-12 02:10:11,792 - anki_forge.generation.social_ingest - WARNING - [DMFe8fxyyCp] GCP/Chirp transcription failed; trying Gemini visual pass: 429 Resource has been exhausted (e.g. check quota).
+2026-10-12 02:10:11,985 - anki_forge.generation.social_ingest - WARNING - [DMFe8fxyyCp] visual fallback request metadata: path=D:\ANKI\data\requests\social_downloads\japanese\blackbeltjapanese\DMFe8fxyyCp.mp4 mime_type=video/mp4 size_mb=1.23 model=gemini-3.8-flash use_vertex=True prompt_chars=0
+2026-10-12 02:10:13,377 - anki_forge.gemini.client - WARNING - Gemini multimodal request details: model=gemini-3.8-flash mime_type=video/mp4 file_size_mb=1.23 use_vertex=True response_mime_type=application/json input_part_count=2 prompt_chars=4698
+2026-10-12 02:10:13,377 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 02:10:24,872 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.8-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 02:10:29,169 - anki_forge.generation.social_ingest - INFO - [DMkxF-ZyTFN] submitting Chirp 3 job
+2026-10-12 02:11:48,460 - anki_forge.generation.social_ingest - INFO - [DMSaluzy__S] submitting Chirp 3 job
+2026-10-12 02:11:55,426 - anki_forge.generation.social_ingest - INFO - [DMSaluzy__S] audio fallback was too weak; trying Gemini visual pass
+2026-10-12 02:11:55,430 - anki_forge.generation.social_ingest - WARNING - [DMSaluzy__S] visual fallback request metadata: path=D:\ANKI\data\requests\social_downloads\japanese\blackbeltjapanese\DMSaluzy__S.mp4 mime_type=video/mp4 size_mb=0.50 model=gemini-3.8-flash use_vertex=True prompt_chars=0
+2026-10-12 02:11:55,527 - anki_forge.gemini.client - WARNING - Gemini multimodal request details: model=gemini-3.8-flash mime_type=video/mp4 file_size_mb=0.50 use_vertex=True response_mime_type=application/json input_part_count=2 prompt_chars=4698
+2026-10-12 02:11:55,527 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 02:12:05,263 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.8-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 02:12:08,692 - anki_forge.generation.social_ingest - INFO - [DMvEQzKyUDS] submitting Chirp 3 job
+2026-10-12 02:12:19,121 - anki_forge.generation.social_ingest - INFO - [DMvEQzKyUDS] audio fallback was too weak; trying Gemini visual pass
+2026-10-12 02:12:19,125 - anki_forge.generation.social_ingest - WARNING - [DMvEQzKyUDS] visual fallback request metadata: path=D:\ANKI\data\requests\social_downloads\japanese\blackbeltjapanese\DMvEQzKyUDS.mp4 mime_type=video/mp4 size_mb=0.61 model=gemini-3.8-flash use_vertex=True prompt_chars=0
+2026-10-12 02:12:19,217 - anki_forge.gemini.client - WARNING - Gemini multimodal request details: model=gemini-3.8-flash mime_type=video/mp4 file_size_mb=0.61 use_vertex=True response_mime_type=application/json input_part_count=2 prompt_chars=4698
+2026-10-12 02:12:19,218 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 02:12:25,864 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.8-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 02:12:29,204 - anki_forge.generation.social_ingest - INFO - [DMx845xyo4W] submitting Chirp 3 job
+2026-10-12 02:12:38,600 - anki_forge.generation.social_ingest - INFO - [DMx845xyo4W] audio fallback was too weak; trying Gemini visual pass
+2026-10-12 02:12:38,604 - anki_forge.generation.social_ingest - WARNING - [DMx845xyo4W] visual fallback request metadata: path=D:\ANKI\data\requests\social_downloads\japanese\blackbeltjapanese\DMx845xyo4W.mp4 mime_type=video/mp4 size_mb=0.83 model=gemini-3.8-flash use_vertex=True prompt_chars=0
+2026-10-12 02:12:38,702 - anki_forge.gemini.client - WARNING - Gemini multimodal request details: model=gemini-3.8-flash mime_type=video/mp4 file_size_mb=0.83 use_vertex=True response_mime_type=application/json input_part_count=2 prompt_chars=4698
+2026-10-12 02:12:38,702 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 02:12:45,742 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.8-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 02:12:49,221 - anki_forge.generation.social_ingest - INFO - [DT2K7-jgcD7] submitting Chirp 3 job
+2026-10-12 02:13:01,789 - anki_forge.generation.social_ingest - INFO - [DT2K7-jgcD7] audio fallback was too weak; trying Gemini visual pass
+2026-10-12 02:13:01,793 - anki_forge.generation.social_ingest - WARNING - [DT2K7-jgcD7] visual fallback request metadata: path=D:\ANKI\data\requests\social_downloads\japanese\blackbeltjapanese\DT2K7-jgcD7.mp4 mime_type=video/mp4 size_mb=1.19 model=gemini-3.8-flash use_vertex=True prompt_chars=0
+2026-10-12 02:13:01,888 - anki_forge.gemini.client - WARNING - Gemini multimodal request details: model=gemini-3.8-flash mime_type=video/mp4 file_size_mb=1.19 use_vertex=True response_mime_type=application/json input_part_count=2 prompt_chars=4698
+2026-10-12 02:13:01,889 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 02:13:09,135 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.8-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 02:13:12,588 - anki_forge.generation.social_ingest - INFO - [DTakz9MAeIu] submitting Chirp 3 job
+2026-10-12 02:13:37,551 - anki_forge.generation.social_ingest - INFO - [DTakz9MAeIu] audio fallback was too weak; trying Gemini visual pass
+2026-10-12 02:13:37,557 - anki_forge.generation.social_ingest - WARNING - [DTakz9MAeIu] visual fallback request metadata: path=D:\ANKI\data\requests\social_downloads\japanese\blackbeltjapanese\DTakz9MAeIu.mp4 mime_type=video/mp4 size_mb=0.87 model=gemini-3.8-flash use_vertex=True prompt_chars=0
+2026-10-12 02:13:37,655 - anki_forge.gemini.client - WARNING - Gemini multimodal request details: model=gemini-3.8-flash mime_type=video/mp4 file_size_mb=0.87 use_vertex=True response_mime_type=application/json input_part_count=2 prompt_chars=4698
+2026-10-12 02:13:37,655 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 02:13:47,903 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.8-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 02:13:51,362 - anki_forge.generation.social_ingest - INFO - [DTg_Hh5gRuQ] submitting Chirp 3 job
+2026-10-12 02:14:05,776 - anki_forge.generation.social_ingest - INFO - [DTKLnJYATUT] submitting Chirp 3 job
+2026-10-12 02:14:39,433 - anki_forge.generation.social_ingest - INFO - [DTLQY49gVZE] submitting Chirp 3 job
+2026-10-12 02:14:52,910 - anki_forge.generation.social_ingest - INFO - [DTMsQAoAQFG] submitting Chirp 3 job
+2026-10-12 02:15:01,544 - anki_forge.generation.social_ingest - INFO - [DTMsQAoAQFG] audio fallback was too weak; trying Gemini visual pass
+2026-10-12 02:15:01,549 - anki_forge.generation.social_ingest - WARNING - [DTMsQAoAQFG] visual fallback request metadata: path=D:\ANKI\data\requests\social_downloads\japanese\blackbeltjapanese\DTMsQAoAQFG.mp4 mime_type=video/mp4 size_mb=1.49 model=gemini-3.8-flash use_vertex=True prompt_chars=0
+2026-10-12 02:15:01,646 - anki_forge.gemini.client - WARNING - Gemini multimodal request details: model=gemini-3.8-flash mime_type=video/mp4 file_size_mb=1.49 use_vertex=True response_mime_type=application/json input_part_count=2 prompt_chars=4698
+2026-10-12 02:15:01,646 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 02:16:03,598 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.8-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 02:16:07,030 - anki_forge.generation.social_ingest - INFO - [DTnnKJBgYM9] submitting Chirp 3 job
+2026-10-12 02:16:20,348 - anki_forge.generation.social_ingest - INFO - [DTnnKJBgYM9] audio fallback was too weak; trying Gemini visual pass
+2026-10-12 02:16:20,352 - anki_forge.generation.social_ingest - WARNING - [DTnnKJBgYM9] visual fallback request metadata: path=D:\ANKI\data\requests\social_downloads\japanese\blackbeltjapanese\DTnnKJBgYM9.mp4 mime_type=video/mp4 size_mb=1.10 model=gemini-3.8-flash use_vertex=True prompt_chars=0
+2026-10-12 02:16:20,449 - anki_forge.gemini.client - WARNING - Gemini multimodal request details: model=gemini-3.8-flash mime_type=video/mp4 file_size_mb=1.10 use_vertex=True response_mime_type=application/json input_part_count=2 prompt_chars=4698
+2026-10-12 02:16:20,449 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 02:16:28,937 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.8-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 02:16:32,289 - anki_forge.generation.social_ingest - INFO - [DTNz3UYAUXA] submitting Chirp 3 job
+2026-10-12 02:16:42,568 - anki_forge.generation.social_ingest - INFO - [DTSDvTXAVmZ] submitting Chirp 3 job
+2026-10-12 02:16:56,256 - anki_forge.generation.social_ingest - INFO - [DTVlU2-Af7g] submitting Chirp 3 job
+2026-10-12 02:17:03,998 - anki_forge.generation.social_ingest - INFO - [DTVlU2-Af7g] audio fallback was too weak; trying Gemini visual pass
+2026-10-12 02:17:04,002 - anki_forge.generation.social_ingest - WARNING - [DTVlU2-Af7g] visual fallback request metadata: path=D:\ANKI\data\requests\social_downloads\japanese\blackbeltjapanese\DTVlU2-Af7g.mp4 mime_type=video/mp4 size_mb=0.92 model=gemini-3.8-flash use_vertex=True prompt_chars=0
+2026-10-12 02:17:04,099 - anki_forge.gemini.client - WARNING - Gemini multimodal request details: model=gemini-3.8-flash mime_type=video/mp4 file_size_mb=0.92 use_vertex=True response_mime_type=application/json input_part_count=2 prompt_chars=4698
+2026-10-12 02:17:04,099 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 02:17:11,122 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.8-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 02:17:11,125 - anki_forge.generation.social_ingest - INFO - [DTVlU2-Af7g] visual pass marked video not useful: The video is a brief movie excerpt from Austin Powers with subtitle overlays for a single phrase, lacking linguistic explanation or grammatical breakdown, making it too thin for a study deck. The closest curriculum topic is Keigo and Formal Japanese.
+2026-10-12 02:17:14,585 - anki_forge.generation.social_ingest - INFO - [DTVnfBCgcGt] submitting Chirp 3 job
+2026-10-12 02:17:25,985 - anki_forge.generation.social_ingest - INFO - [DTVy9cCk72C] submitting Chirp 3 job
+2026-10-12 06:15:50,166 - anki_forge.generation.social_ingest - WARNING - [chirp3 DTVy9cCk72C] attempt 1/6 failed: ResourceExhausted; sleeping 7.2s
+2026-10-12 06:15:57,323 - anki_forge.generation.social_ingest - INFO - [DTVy9cCk72C] submitting Chirp 3 job
+2026-10-12 06:15:59,285 - anki_forge.generation.social_ingest - WARNING - [chirp3 DTVy9cCk72C] attempt 2/6 failed: ResourceExhausted; sleeping 8.1s
+2026-10-12 06:16:07,350 - anki_forge.generation.social_ingest - INFO - [DTVy9cCk72C] submitting Chirp 3 job
+2026-10-12 06:16:15,045 - anki_forge.generation.social_ingest - WARNING - [chirp3 DTVy9cCk72C] attempt 3/6 failed: ResourceExhausted; sleeping 23.5s
+2026-10-12 06:16:38,568 - anki_forge.generation.social_ingest - INFO - [DTVy9cCk72C] submitting Chirp 3 job
+2026-10-12 09:24:15,093 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-12 09:24:15,093 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-12 09:24:15,115 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 09:24:15,115 - google_genai.models - WARNING - Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+2026-10-12 09:24:17,094 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 09:24:20,650 - anki_forge.cli.main - INFO - PRODUCTION RUN START exam=java_interview mode=default pdf_input_dir=data/requests/incoming
+2026-10-12 09:24:20,665 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-12 09:24:20,684 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-12 09:24:20,684 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-12 09:24:22,039 - anki_forge.pipelines.folder_ingest_stage - INFO - Exam java_interview card taxonomy: source=topic, count=10, allowed_types=concept, direct_interview, scenario, coding, output_prediction, comparison, debugging, design_reasoning, follow_up, trap_question
+2026-10-12 09:24:22,210 - anki_forge.pipelines.folder_ingest_stage - INFO - 0 new file(s) to process in data/requests/incoming (4 already processed)
+2026-10-12 09:24:22,215 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST START exam=java_interview sources_file=None output_dir=None profile=mild
+2026-10-12 09:24:23,551 - anki_forge.generation.social_ingest - INFO - ffmpeg: C:\ProgramData\chocolatey\bin\ffmpeg.EXE | ffprobe: C:\ProgramData\chocolatey\bin\ffprobe.EXE
+2026-10-12 09:27:13,460 - anki_forge.generation.social_ingest - WARNING - Interrupt received; finishing current step and shutting down cleanly.
+2026-10-12 09:29:50,232 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-12 09:29:50,251 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-12 09:29:50,252 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-12 09:33:11,288 - anki_forge.generation.social_ingest - WARNING - Interrupt received; finishing current step and shutting down cleanly.
+2026-10-12 09:33:12,107 - anki_forge.generation.social_ingest - INFO - Social ingest complete: D:\ANKI\data\requests\social_downloads\java_interview\java_interview_reels.tsv
+2026-10-12 09:33:12,108 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST TSV exam=java_interview tsv_path=D:\ANKI\data\requests\social_downloads\java_interview\java_interview_reels.tsv
+2026-10-12 09:33:12,108 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST COMPLETED exam=java_interview status=SKIPPED detail=ingest_only_or_interrupted
+2026-10-12 09:33:16,498 - anki_forge.pipelines.build_deck_stage - INFO - BUILD_DECK START exam=java_interview stage=source_gate
+2026-10-12 09:33:52,642 - anki_forge.pipelines.build_deck_stage - INFO - SOURCE COMPLETENESS GATE exam=java_interview status=FAIL blocking_reasons=['32 unresolved source artifact(s)']
+2026-10-12 09:33:52,642 - anki_forge.pipelines._shared - ERROR - build-deck for java_interview failed with an unexpected error - work already saved to the database up to this point is safe. Backing up before exiting.
+Traceback (most recent call last):
+  File "D:\ANKI\src\anki_forge\pipelines\_shared.py", line 72, in _graceful_run
+    yield
+  File "D:\ANKI\src\anki_forge\pipelines\build_deck_stage.py", line 32, in build_deck
+    raise RuntimeError(
+RuntimeError: Source completeness gate failed for java_interview: 32 unresolved source artifact(s)
+2026-10-12 09:34:01,990 - anki_forge.utils.backup - INFO - Database synced: db\anki_cards.db -> D:\backup\anki_cards.db
+2026-10-12 10:16:27,579 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-12 10:16:27,579 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-12 10:16:27,601 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-12 10:16:27,601 - google_genai.models - WARNING - Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+2026-10-12 10:16:29,156 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-12 10:16:31,453 - anki_forge.cli.main - INFO - PRODUCTION RUN START exam=java_interview mode=default pdf_input_dir=data/requests/incoming
+2026-10-12 10:16:31,469 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-12 10:16:31,488 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-12 10:16:31,489 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
+2026-10-12 10:16:31,508 - anki_forge.pipelines.folder_ingest_stage - INFO - Exam java_interview card taxonomy: source=topic, count=10, allowed_types=concept, direct_interview, scenario, coding, output_prediction, comparison, debugging, design_reasoning, follow_up, trap_question
+2026-10-12 10:16:31,781 - anki_forge.pipelines.folder_ingest_stage - INFO - 0 new file(s) to process in data/requests/incoming (4 already processed)
+2026-10-12 10:16:31,789 - anki_forge.pipelines.social_ingest_stage - INFO - SOCIAL INGEST START exam=java_interview sources_file=None output_dir=None profile=mild
+2026-10-12 10:16:32,527 - anki_forge.generation.social_ingest - INFO - ffmpeg: C:\ProgramData\chocolatey\bin\ffmpeg.EXE | ffprobe: C:\ProgramData\chocolatey\bin\ffprobe.EXE
+2026-10-12 10:21:09,831 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-12 10:21:09,851 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-12 10:21:09,851 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.7-flash retries=5 use_vertex=True timeout=120s
