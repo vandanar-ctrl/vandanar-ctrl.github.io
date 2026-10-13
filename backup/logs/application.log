@@ -82333,3 +82333,138 @@ RuntimeError: Source completeness gate failed for japanese: artifacts discovered
 2026-10-13 11:07:48,737 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
 2026-10-13 11:07:48,744 - anki_forge.audit.auditor - INFO - Auditing subject=REST API Design (148 cards)
 2026-10-13 11:07:48,750 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:08:25,799 - anki_forge.llm.factory - INFO - LLM provider: gemini (use_vertex=True)
+2026-10-13 11:08:25,834 - anki_forge.gemini.client - INFO - Gemini client using Vertex AI (project=project-b59799fe-59eb-40d0-a9f, location=global)
+2026-10-13 11:08:25,834 - anki_forge.gemini.client - INFO - Gemini client configured model=gemini-3.8-flash retries=5 use_vertex=True timeout=120s
+2026-10-13 11:08:36,756 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:08:36,767 - anki_forge.audit.auditor - INFO - Auditing subject=Behavioral and HR Round Preparation (233 cards)
+2026-10-13 11:08:36,813 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:08:56,967 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:08:56,971 - anki_forge.audit.auditor - INFO - Auditing subject=AWS for Java Microservices (121 cards)
+2026-10-13 11:08:56,975 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:10:51,845 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 499 Client Closed Request"
+2026-10-13 11:10:51,847 - anki_forge.gemini.client - WARNING - API call failed (attempt 1/5): 499 CANCELLED. {'error': {'code': 499, 'message': 'The operation was cancelled.', 'status': 'CANCELLED'}}
+2026-10-13 11:10:51,847 - anki_forge.audit.auditor - ERROR - Audit failed for subject=AWS for Java Microservices: 499 CANCELLED. {'error': {'code': 499, 'message': 'The operation was cancelled.', 'status': 'CANCELLED'}}
+2026-10-13 11:10:51,847 - anki_forge.audit.auditor - INFO - Auditing subject=System Design for Microservices (628 cards)
+2026-10-13 11:10:51,865 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:11:36,964 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:11:36,978 - anki_forge.audit.auditor - INFO - Auditing subject=Messaging and Event Streaming (110 cards)
+2026-10-13 11:11:36,983 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:12:00,074 - anki_forge.generation.social_ingest - INFO - [DZXXHofvrrs] submitting Chirp 3 job
+2026-10-13 11:12:05,385 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:12:05,391 - anki_forge.audit.auditor - INFO - Auditing subject=Databases, SQL and Transactions (251 cards)
+2026-10-13 11:12:05,401 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:12:34,734 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:12:34,742 - anki_forge.audit.auditor - INFO - Auditing subject=Redis and Distributed Systems Fundamentals (201 cards)
+2026-10-13 11:12:34,750 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:13:41,600 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:13:41,613 - anki_forge.audit.auditor - INFO - Auditing subject=Spring Core and Spring Boot (433 cards)
+2026-10-13 11:13:41,968 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:14:52,265 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:14:52,288 - anki_forge.audit.auditor - INFO - Auditing subject=Build Tools - Maven and Gradle (29 cards)
+2026-10-13 11:14:52,291 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:15:14,738 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:15:14,745 - anki_forge.audit.auditor - INFO - Auditing subject=Java Generics (22 cards)
+2026-10-13 11:15:14,747 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:15:44,318 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:15:44,325 - anki_forge.audit.auditor - INFO - Auditing subject=DSA Linear Structures (199 cards)
+2026-10-13 11:15:44,332 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:16:49,799 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:16:49,816 - anki_forge.audit.auditor - INFO - Auditing subject=AI Guardrails and LLM Security Basics (61 cards)
+2026-10-13 11:16:49,819 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:17:28,859 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:17:28,868 - anki_forge.audit.auditor - INFO - Auditing subject=DSA Trees, Heaps, and Tries (17 cards)
+2026-10-13 11:17:28,870 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:17:50,547 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:17:50,554 - anki_forge.audit.auditor - INFO - Auditing subject=GenAI and Agentic AI Theory for AI-Native Java Developers (711 cards)
+2026-10-13 11:17:50,579 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:18:45,191 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:18:45,204 - anki_forge.audit.auditor - INFO - Auditing subject=Docker and Kubernetes (238 cards)
+2026-10-13 11:18:45,213 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:19:24,233 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:19:24,243 - anki_forge.audit.auditor - INFO - Auditing subject=CI/CD and DevOps (102 cards)
+2026-10-13 11:19:24,248 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:19:53,382 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:19:53,388 - anki_forge.audit.auditor - INFO - Auditing subject=Spring Security (113 cards)
+2026-10-13 11:19:53,393 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:20:41,152 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:20:41,163 - anki_forge.audit.auditor - INFO - Auditing subject=Frontend for Full Stack - JavaScript, TypeScript, React, Angular (110 cards)
+2026-10-13 11:20:41,169 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:21:06,457 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:21:06,463 - anki_forge.audit.auditor - INFO - Auditing subject=DSA Graphs (17 cards)
+2026-10-13 11:21:06,465 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:21:30,327 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:21:30,333 - anki_forge.audit.auditor - INFO - Auditing subject=DSA Greedy Algorithms and Bit Manipulation (22 cards)
+2026-10-13 11:21:30,336 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:21:59,826 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:21:59,833 - anki_forge.audit.auditor - INFO - Auditing subject=DSA Mixed Interview Problem Solving (34 cards)
+2026-10-13 11:21:59,836 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:22:38,159 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:22:38,165 - anki_forge.audit.auditor - INFO - Auditing subject=DSA Dynamic Programming (9 cards)
+2026-10-13 11:22:38,167 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:23:01,061 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:23:01,068 - anki_forge.audit.auditor - INFO - Auditing subject=Cloud AI Platforms - AWS, Azure, and GCP AI Services for Java Developers (32 cards)
+2026-10-13 11:23:01,069 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:23:27,714 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:23:27,722 - anki_forge.audit.auditor - INFO - Auditing subject=DSA Recursion and Backtracking (7 cards)
+2026-10-13 11:23:27,724 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:23:41,409 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:23:41,415 - anki_forge.audit.auditor - INFO - Auditing subject=Reactive Programming and Spring WebFlux (22 cards)
+2026-10-13 11:23:41,418 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:24:01,615 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:24:01,623 - anki_forge.audit.auditor - INFO - Auditing subject=Azure for Java Microservices (29 cards)
+2026-10-13 11:24:01,626 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:24:23,710 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:24:23,718 - anki_forge.audit.auditor - INFO - Assessing learning quality for 6323 card(s)
+2026-10-13 11:24:23,853 - anki_forge.audit.auditor - INFO - Verifying source evidence for 6323 card(s)
+2026-10-13 11:25:01,133 - anki_forge.audit.remediator - INFO - Closed 179 stale recommendation(s) referencing already-removed cards
+2026-10-13 11:25:01,210 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:05,700 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:05,882 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:11,376 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:11,476 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:13,957 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:14,121 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:17,039 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:17,770 - anki_forge.repositories.cards_repo - INFO - CARD ARCHIVED card_id=a0fedf61-d013-405d-9f3d-5cf95044b166 exam=java_interview reason=duplicate: Both cards cover the difference between method overloading and method overriding in Java. card_09bf8c49d247c4f72078 is prioritized as it is backed by an instagram_reel video source and includes a real-world example.
+2026-10-13 11:25:17,868 - anki_forge.audit.remediator - INFO - Archived duplicate card a0fedf61-d013-405d-9f3d-5cf95044b166 (kept ['card_09bf8c49d247c4f72078']: Both cards cover the difference between method overloading and method overriding in Java. card_09bf8c49d247c4f72078 is prioritized as it is backed by an instagram_reel video source and includes a real-world example.)
+2026-10-13 11:25:17,953 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:20,604 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:20,674 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:23,393 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:23,560 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:26,677 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:26,823 - anki_forge.repositories.cards_repo - INFO - CARD ARCHIVED card_id=card_8a6ca46e29c338607969 exam=java_interview reason=duplicate: Both cards are backed by Instagram reels with no diagrams, but card_09bf8c49d247c4f72078 provides a more comprehensive, structured interview answer explicitly covering compile-time vs runtime polymorphism, method resolution, and inheritance requirements.
+2026-10-13 11:25:26,859 - anki_forge.audit.remediator - INFO - Archived duplicate card card_8a6ca46e29c338607969 (kept ['card_09bf8c49d247c4f72078']: Both cards are backed by Instagram reels with no diagrams, but card_09bf8c49d247c4f72078 provides a more comprehensive, structured interview answer explicitly covering compile-time vs runtime polymorphism, method resolution, and inheritance requirements.)
+2026-10-13 11:25:26,960 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:31,622 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:31,650 - anki_forge.repositories.cards_repo - INFO - CARD ARCHIVED card_id=f5d93f5f-d66a-4b78-aae2-1fc3da617eff exam=java_interview reason=duplicate: card_da05b317243fc85d093b directly and comprehensively compares both sides of the diamond problem (multiple class inheritance vs. multiple interface implementation) with clear, interview-ready phrasing.
+2026-10-13 11:25:31,691 - anki_forge.audit.remediator - INFO - Archived duplicate card f5d93f5f-d66a-4b78-aae2-1fc3da617eff (kept ['card_da05b317243fc85d093b']: card_da05b317243fc85d093b directly and comprehensively compares both sides of the diamond problem (multiple class inheritance vs. multiple interface implementation) with clear, interview-ready phrasing.)
+2026-10-13 11:25:31,767 - anki_forge.repositories.cards_repo - INFO - CARD ARCHIVED card_id=card_31d7e156ff606fbbddbd exam=java_interview reason=duplicate: card_da05b317243fc85d093b directly and comprehensively compares both sides of the diamond problem (multiple class inheritance vs. multiple interface implementation) with clear, interview-ready phrasing.
+2026-10-13 11:25:31,805 - anki_forge.audit.remediator - INFO - Archived duplicate card card_31d7e156ff606fbbddbd (kept ['card_da05b317243fc85d093b']: card_da05b317243fc85d093b directly and comprehensively compares both sides of the diamond problem (multiple class inheritance vs. multiple interface implementation) with clear, interview-ready phrasing.)
+2026-10-13 11:25:31,831 - anki_forge.repositories.cards_repo - INFO - CARD ARCHIVED card_id=card_c1ebf6553f9cda564f79 exam=java_interview reason=duplicate: card_da05b317243fc85d093b directly and comprehensively compares both sides of the diamond problem (multiple class inheritance vs. multiple interface implementation) with clear, interview-ready phrasing.
+2026-10-13 11:25:31,863 - anki_forge.audit.remediator - INFO - Archived duplicate card card_c1ebf6553f9cda564f79 (kept ['card_da05b317243fc85d093b']: card_da05b317243fc85d093b directly and comprehensively compares both sides of the diamond problem (multiple class inheritance vs. multiple interface implementation) with clear, interview-ready phrasing.)
+2026-10-13 11:25:31,927 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:35,033 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:35,048 - anki_forge.repositories.cards_repo - INFO - CARD ARCHIVED card_id=3b9e60e1-b7bc-4306-b404-2c80083e1227 exam=java_interview reason=duplicate: Both cards test covariant return types in Java method overriding. card_22899d1513c399ae257e is backed by an instagram reel, provides a concrete code scenario, and includes detailed explanation and common mistake fields.
+2026-10-13 11:25:35,167 - anki_forge.audit.remediator - INFO - Archived duplicate card 3b9e60e1-b7bc-4306-b404-2c80083e1227 (kept ['card_22899d1513c399ae257e']: Both cards test covariant return types in Java method overriding. card_22899d1513c399ae257e is backed by an instagram reel, provides a concrete code scenario, and includes detailed explanation and common mistake fields.)
+2026-10-13 11:25:35,230 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:37,729 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:37,745 - anki_forge.repositories.cards_repo - INFO - CARD ARCHIVED card_id=70e23327-3f63-4378-a408-f4881e838abb exam=java_interview reason=duplicate: Both cards explain encapsulation using the bank account example, but card_6db8ef25f3f5b3c4146a is backed by an instagram_reel video walkthrough.
+2026-10-13 11:25:37,856 - anki_forge.audit.remediator - INFO - Archived duplicate card 70e23327-3f63-4378-a408-f4881e838abb (kept ['card_6db8ef25f3f5b3c4146a']: Both cards explain encapsulation using the bank account example, but card_6db8ef25f3f5b3c4146a is backed by an instagram_reel video walkthrough.)
+2026-10-13 11:25:37,928 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:41,018 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:41,098 - anki_forge.repositories.cards_repo - INFO - CARD ARCHIVED card_id=card_3896d3951472b77683fd exam=java_interview reason=duplicate: Both cards test the identical core concept of Java's default constructor behavior when a custom constructor is declared. card_5b0ef522ecc90bf16a46 is kept as it has richer supporting metadata including a populated real-world example.
+2026-10-13 11:25:41,141 - anki_forge.audit.remediator - INFO - Archived duplicate card card_3896d3951472b77683fd (kept ['card_5b0ef522ecc90bf16a46']: Both cards test the identical core concept of Java's default constructor behavior when a custom constructor is declared. card_5b0ef522ecc90bf16a46 is kept as it has richer supporting metadata including a populated real-world example.)
+2026-10-13 11:25:41,239 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:44,282 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:44,411 - anki_forge.repositories.cards_repo - INFO - CARD ARCHIVED card_id=card_a0f37140ea535ccd7ed9 exam=java_interview reason=duplicate: Both cards cover the same concept (static method hiding vs. instance method overriding). card_87f3f5c18c760d46fb3a is selected as it provides a clearer side-by-side comparison with complete supporting fields including a concise shortcut.
+2026-10-13 11:25:44,451 - anki_forge.audit.remediator - INFO - Archived duplicate card card_a0f37140ea535ccd7ed9 (kept ['card_87f3f5c18c760d46fb3a']: Both cards cover the same concept (static method hiding vs. instance method overriding). card_87f3f5c18c760d46fb3a is selected as it provides a clearer side-by-side comparison with complete supporting fields including a concise shortcut.)
+2026-10-13 11:25:44,558 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+2026-10-13 11:25:49,053 - httpx - INFO - HTTP Request: POST https://aiplatform.googleapis.com/v1beta1/projects/project-b59799fe-59eb-40d0-a9f/locations/global/publishers/google/models/gemini-3.7-flash:generateContent "HTTP/1.1 200 OK"
+2026-10-13 11:25:49,182 - anki_forge.audit.remediator - INFO - Duplicate pick preferred card_7837f28433df7ac54f0a's wording but kept card_b89df25e57ee4bc23c8c's identity (oldest in group) to preserve Anki review history
+2026-10-13 11:25:49,195 - anki_forge.repositories.cards_repo - INFO - CARD ARCHIVED card_id=card_f66a9943df55ff9d3fe6 exam=java_interview reason=duplicate: card_7837f28433df7ac54f0a provides the most complete and well-structured answer, clearly explaining both what GoF stands for and detailing the three design pattern categories with concrete examples.
+2026-10-13 11:25:49,284 - anki_forge.audit.remediator - INFO - Archived duplicate card card_f66a9943df55ff9d3fe6 (kept ['card_b89df25e57ee4bc23c8c']: card_7837f28433df7ac54f0a provides the most complete and well-structured answer, clearly explaining both what GoF stands for and detailing the three design pattern categories with concrete examples.)
+2026-10-13 11:25:49,297 - anki_forge.repositories.cards_repo - INFO - CARD ARCHIVED card_id=card_7837f28433df7ac54f0a exam=java_interview reason=duplicate: card_7837f28433df7ac54f0a provides the most complete and well-structured answer, clearly explaining both what GoF stands for and detailing the three design pattern categories with concrete examples.
+2026-10-13 11:25:49,376 - anki_forge.audit.remediator - INFO - Archived duplicate card card_7837f28433df7ac54f0a (kept ['card_b89df25e57ee4bc23c8c']: card_7837f28433df7ac54f0a provides the most complete and well-structured answer, clearly explaining both what GoF stands for and detailing the three design pattern categories with concrete examples.)
+2026-10-13 11:25:49,474 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
