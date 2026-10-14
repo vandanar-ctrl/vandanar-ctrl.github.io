@@ -91019,3 +91019,7 @@ RuntimeError: Source completeness gate failed for japanese: artifacts discovered
 2026-10-14 09:38:12,094 - anki_forge.generation.social_ingest - INFO - [DdqoZROTXpm] processing reel: file=DdqoZROTXpm.mp4 platform=instagram url=https://www.instagram.com/daily_japanese_phrases/reels
 2026-10-14 09:38:12,095 - anki_forge.generation.social_ingest - INFO - [DdqoZROTXpm] starting per-video ingest: file=DdqoZROTXpm.mp4 size_mb=3.33
 2026-10-14 09:38:14,521 - anki_forge.generation.social_ingest - INFO - [DdqoZROTXpm] submitting Chirp 3 job (timeout=300.0s)
+2026-10-14 09:39:05,988 - anki_forge.generation.social_ingest - INFO - [DdqoZROTXpm] audio fallback was too weak; trying Gemini visual pass
+2026-10-14 09:39:06,157 - anki_forge.generation.social_ingest - WARNING - [DdqoZROTXpm] visual fallback request metadata: path=D:\ANKI\data\requests\social_downloads\japanese\daily_japanese_phrases\DdqoZROTXpm.mp4 mime_type=video/mp4 size_mb=3.33 model=gemini-3.8-flash use_vertex=True prompt_chars=0
+2026-10-14 09:39:06,434 - anki_forge.gemini.client - WARNING - Gemini multimodal request details: model=gemini-3.8-flash mime_type=video/mp4 file_size_mb=3.33 use_vertex=True response_mime_type=application/json input_part_count=2 prompt_chars=5590
+2026-10-14 09:39:06,435 - google_genai.models - INFO - AFC is enabled with max remote calls: 10.
